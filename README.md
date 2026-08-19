@@ -1,10 +1,11 @@
 # Traceable batch decision layer for MOF activation-stability screening
 
-> **PRIVATE RELEASE-METADATA STAGING SNAPSHOT**  
-> The scientific code/data/results snapshot remains frozen to the audited
-> predecessor. This branch prepares version 1.0.0 metadata only. No public
-> repository identifier, immutable release/tag, or Zenodo DOI is claimed until
-> the corresponding external service action has actually completed.
+> **PUBLIC RELEASE REPOSITORY**  
+> This repository contains the versioned reproducibility package for the study.
+> The scientific code, data, models, results and traces remain frozen to the
+> audited scientific payload. The immutable `v1.0.0` release is archived by
+> Zenodo at DOI `10.5281/zenodo.22016145`. Patch release `v1.0.1` corrects
+> public-release metadata only and does not alter the scientific payload.
 
 This repository implements a retrospective MOFSimplify-derived activation /
 solvent-removal benchmark. It separates a policy-agnostic trace layer from the
@@ -67,9 +68,11 @@ statements directly.
 
 ## Release status
 
-This metadata branch prepares version `1.0.0`. Public repository visibility,
-an immutable release/tag and Zenodo archival registration have not yet been
-executed, so no public release URL or Zenodo DOI is claimed here.
+The repository is public and uses immutable GitHub releases. Version-specific
+software archives are created through the connected Zenodo integration. Use the
+DOI shown on the corresponding Zenodo record when citing a specific release.
+The `v1.0.0` scientific payload remains preserved at its immutable release and
+Zenodo record; `v1.0.1` changes release metadata only.
 
 ## Licensing and third-party attribution
 
