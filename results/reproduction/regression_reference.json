@@ -1,0 +1,1539 @@
+{
+  "diagnostics": {
+    "final_fit_n_iter": 22,
+    "max_iter": 20000,
+    "maximum_cv_n_iter": 8028,
+    "note": "iteration counts and machine-precision reload differences are environment diagnostics, not cross-platform scientific claims",
+    "tol": 1e-06
+  },
+  "exact": {
+    "activation": {
+      "all_activation_fits_converged": true,
+      "cv_fold_group_overlap_count_max": 0,
+      "cv_splitter": "StratifiedGroupKFold",
+      "n_calibration": 158,
+      "n_excluded_train_source_overlap": 434,
+      "n_test": 193,
+      "n_train": 1394,
+      "selected_C": 0.001,
+      "solver": "lbfgs"
+    },
+    "descriptor_contrast_count": 12,
+    "dummy_baselines": [
+      {
+        "evaluation_split": "final_publication_source_disjoint_test",
+        "fit_split": "train",
+        "strategy": "most_frequent",
+        "test_n": 193,
+        "training_majority_class": 1,
+        "training_n": 1394
+      },
+      {
+        "evaluation_split": "final_publication_source_disjoint_test",
+        "fit_split": "train",
+        "strategy": "prior",
+        "test_n": 193,
+        "training_majority_class": 1,
+        "training_n": 1394
+      }
+    ],
+    "legacy_risk_stress": [
+      {
+        "batch_size": 5,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 2,
+        "method": "cost_aware",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00431_ZASJAG",
+          "mofsimplify_solvent_val_00348_ZUQMAB"
+        ],
+        "selected_count": 2,
+        "selection_event_count": 2,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 5,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 1,
+        "method": "portfolio_batch",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00146_ICITEU",
+          "mofsimplify_solvent_test_00021_BADYAJ"
+        ],
+        "selected_count": 2,
+        "selection_event_count": 2,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 5,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 0,
+        "method": "random_baseline",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_val_00347_ZUKNAW",
+          "mofsimplify_solvent_val_00175_MONWET"
+        ],
+        "selected_count": 2,
+        "selection_event_count": 2,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 5,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 2,
+        "method": "top_score",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_val_00290_VACLIX",
+          "mofsimplify_solvent_test_00021_BADYAJ"
+        ],
+        "selected_count": 2,
+        "selection_event_count": 2,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 5,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 2,
+        "method": "uncertainty",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00206_LUYSEF",
+          "mofsimplify_solvent_test_00186_KIYMIP"
+        ],
+        "selected_count": 2,
+        "selection_event_count": 2,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 10,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 5,
+        "method": "cost_aware",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00431_ZASJAG",
+          "mofsimplify_solvent_val_00348_ZUQMAB",
+          "mofsimplify_solvent_test_00075_EBIJAC",
+          "mofsimplify_solvent_test_00384_WILHIK",
+          "mofsimplify_solvent_test_00021_BADYAJ"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 10,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 3,
+        "method": "portfolio_batch",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00146_ICITEU",
+          "mofsimplify_solvent_test_00021_BADYAJ",
+          "mofsimplify_solvent_val_00290_VACLIX",
+          "mofsimplify_solvent_test_00327_SERWAP",
+          "mofsimplify_solvent_test_00036_BUPVEP"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 10,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 1,
+        "method": "random_baseline",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00103_FUXXIH",
+          "mofsimplify_solvent_test_00237_NAWWUG",
+          "mofsimplify_solvent_val_00245_REWNEO01",
+          "mofsimplify_solvent_test_00247_OCOKUP"
+        ],
+        "selected_count": 4,
+        "selection_event_count": 4,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 10,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 4,
+        "method": "top_score",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_val_00290_VACLIX",
+          "mofsimplify_solvent_test_00021_BADYAJ",
+          "mofsimplify_solvent_test_00036_BUPVEP",
+          "mofsimplify_solvent_test_00015_AVILEY",
+          "mofsimplify_solvent_test_00257_OKUSUK"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 10,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 3,
+        "method": "uncertainty",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00206_LUYSEF",
+          "mofsimplify_solvent_test_00186_KIYMIP",
+          "mofsimplify_solvent_val_00343_ZAHLEC",
+          "mofsimplify_solvent_test_00306_RAHMAP"
+        ],
+        "selected_count": 4,
+        "selection_event_count": 4,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 20,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 6,
+        "method": "cost_aware",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00431_ZASJAG",
+          "mofsimplify_solvent_val_00348_ZUQMAB",
+          "mofsimplify_solvent_test_00075_EBIJAC",
+          "mofsimplify_solvent_test_00384_WILHIK",
+          "mofsimplify_solvent_test_00146_ICITEU",
+          "mofsimplify_solvent_val_00219_PAMHIW",
+          "mofsimplify_solvent_test_00407_XOGXAU",
+          "mofsimplify_solvent_test_00139_YUBQET",
+          "mofsimplify_solvent_test_00413_XUYXAR"
+        ],
+        "selected_count": 9,
+        "selection_event_count": 9,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 20,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 6,
+        "method": "portfolio_batch",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00146_ICITEU",
+          "mofsimplify_solvent_test_00021_BADYAJ",
+          "mofsimplify_solvent_val_00290_VACLIX",
+          "mofsimplify_solvent_test_00327_SERWAP",
+          "mofsimplify_solvent_test_00036_BUPVEP",
+          "mofsimplify_solvent_test_00015_AVILEY",
+          "mofsimplify_solvent_val_00219_PAMHIW",
+          "mofsimplify_solvent_test_00431_ZASJAG",
+          "mofsimplify_solvent_test_00384_WILHIK",
+          "mofsimplify_solvent_test_00407_XOGXAU"
+        ],
+        "selected_count": 10,
+        "selection_event_count": 10,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 20,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 5,
+        "method": "random_baseline",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_val_00347_ZUKNAW",
+          "mofsimplify_solvent_test_00186_KIYMIP",
+          "mofsimplify_solvent_test_00335_TACJIS",
+          "mofsimplify_solvent_val_00100_GUPBEZ02",
+          "mofsimplify_solvent_test_00142_HUWLUI",
+          "mofsimplify_solvent_test_00297_QOKCID",
+          "mofsimplify_solvent_test_00338_TEBSAW",
+          "mofsimplify_solvent_test_00214_MAYJOM",
+          "mofsimplify_solvent_val_00271_TIXCIO"
+        ],
+        "selected_count": 9,
+        "selection_event_count": 9,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 20,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 7,
+        "method": "top_score",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_val_00290_VACLIX",
+          "mofsimplify_solvent_test_00021_BADYAJ",
+          "mofsimplify_solvent_test_00036_BUPVEP",
+          "mofsimplify_solvent_test_00015_AVILEY",
+          "mofsimplify_solvent_test_00257_OKUSUK",
+          "mofsimplify_solvent_test_00259_OKUTEV",
+          "mofsimplify_solvent_test_00327_SERWAP",
+          "mofsimplify_solvent_test_00161_JEJWOL",
+          "mofsimplify_solvent_test_00146_ICITEU",
+          "mofsimplify_solvent_test_00153_INIXOT",
+          "mofsimplify_solvent_test_00004_ACOLOV"
+        ],
+        "selected_count": 11,
+        "selection_event_count": 11,
+        "stop_event_count": 1
+      },
+      {
+        "batch_size": 20,
+        "contract_role": "stress_test_only",
+        "evaluation_split": "test",
+        "full_batch": false,
+        "full_batch_status": "stopped_before_requested_batch",
+        "hits": 7,
+        "method": "uncertainty",
+        "policy_contract": "legacy_risk_stress_0p35",
+        "risk_budget_per_item": 0.3499999999999999,
+        "risk_interpretation": "benchmark-defined uncalibrated proxy",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00206_LUYSEF",
+          "mofsimplify_solvent_test_00186_KIYMIP",
+          "mofsimplify_solvent_val_00343_ZAHLEC",
+          "mofsimplify_solvent_test_00306_RAHMAP",
+          "mofsimplify_solvent_val_00072_EXAXAE",
+          "mofsimplify_solvent_test_00138_HOVGIK",
+          "mofsimplify_solvent_test_00073_DUPVER",
+          "mofsimplify_solvent_val_00177_MOYYEF",
+          "mofsimplify_solvent_val_00149_KIYJAF"
+        ],
+        "selected_count": 9,
+        "selection_event_count": 9,
+        "stop_event_count": 1
+      }
+    ],
+    "locked_policy_grid_values": {
+      "alpha": 1.0,
+      "beta": 0.3,
+      "delta": 0.0,
+      "diversity_distance_scale": 2.0,
+      "gamma": 0.2,
+      "legacy_risk_stress_budget_per_item": 0.35,
+      "legacy_risk_stress_role": "stress_test_only",
+      "primary_policy_mode": "cost_only",
+      "primary_risk_budget": null,
+      "risk_budget_per_item": null
+    },
+    "policy_comparison": [
+      {
+        "batch_size": 5,
+        "evaluation_split": "test",
+        "full_batch": true,
+        "full_batch_status": "full_batch",
+        "hits": 4,
+        "method": "cost_aware",
+        "policy_contract": "cost_only",
+        "risk_budget_per_item": null,
+        "risk_contract": "none",
+        "risk_role": "descriptive_only",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00431_ZASJAG",
+          "mofsimplify_solvent_val_00348_ZUQMAB",
+          "mofsimplify_solvent_test_00075_EBIJAC",
+          "mofsimplify_solvent_test_00384_WILHIK",
+          "mofsimplify_solvent_test_00146_ICITEU"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stop_event_count": 0
+      },
+      {
+        "batch_size": 5,
+        "evaluation_split": "test",
+        "full_batch": true,
+        "full_batch_status": "full_batch",
+        "hits": 3,
+        "method": "portfolio_batch",
+        "policy_contract": "cost_only",
+        "risk_budget_per_item": null,
+        "risk_contract": "none",
+        "risk_role": "descriptive_only",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00146_ICITEU",
+          "mofsimplify_solvent_test_00021_BADYAJ",
+          "mofsimplify_solvent_val_00290_VACLIX",
+          "mofsimplify_solvent_test_00327_SERWAP",
+          "mofsimplify_solvent_test_00036_BUPVEP"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stop_event_count": 0
+      },
+      {
+        "batch_size": 5,
+        "evaluation_split": "test",
+        "full_batch": true,
+        "full_batch_status": "full_batch",
+        "hits": 3,
+        "method": "random_baseline",
+        "policy_contract": "cost_only",
+        "risk_budget_per_item": null,
+        "risk_contract": "none",
+        "risk_role": "descriptive_only",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00186_KIYMIP",
+          "mofsimplify_solvent_val_00145_KILJEV",
+          "mofsimplify_solvent_test_00297_QOKCID",
+          "mofsimplify_solvent_val_00269_TEYLIU",
+          "mofsimplify_solvent_test_00178_KIDXUR"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stop_event_count": 0
+      },
+      {
+        "batch_size": 5,
+        "evaluation_split": "test",
+        "full_batch": true,
+        "full_batch_status": "full_batch",
+        "hits": 4,
+        "method": "top_score",
+        "policy_contract": "cost_only",
+        "risk_budget_per_item": null,
+        "risk_contract": "none",
+        "risk_role": "descriptive_only",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_val_00290_VACLIX",
+          "mofsimplify_solvent_test_00021_BADYAJ",
+          "mofsimplify_solvent_test_00036_BUPVEP",
+          "mofsimplify_solvent_test_00015_AVILEY",
+          "mofsimplify_solvent_test_00257_OKUSUK"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stop_event_count": 0
+      },
+      {
+        "batch_size": 5,
+        "evaluation_split": "test",
+        "full_batch": true,
+        "full_batch_status": "full_batch",
+        "hits": 4,
+        "method": "uncertainty",
+        "policy_contract": "cost_only",
+        "risk_budget_per_item": null,
+        "risk_contract": "none",
+        "risk_role": "descriptive_only",
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00206_LUYSEF",
+          "mofsimplify_solvent_test_00186_KIYMIP",
+          "mofsimplify_solvent_val_00343_ZAHLEC",
+          "mofsimplify_solvent_test_00306_RAHMAP",
+          "mofsimplify_solvent_val_00072_EXAXAE"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stop_event_count": 0
+      }
+    ],
+    "random_design": {
+      "full_pool_runs_per_batch_size": 100,
+      "pool_count": 20,
+      "random_seeds_per_pool": 10
+    },
+    "replay": {
+      "passed_count": 5,
+      "status": "PASS",
+      "trace_count": 5
+    },
+    "risk_feasibility": [
+      {
+        "full_batch_cost_feasible": true,
+        "full_batch_risk_feasible": false,
+        "legacy_risk_contract_role": "stress_test_only",
+        "max_feasible_cardinality_under_cost_cap": 5,
+        "max_feasible_cardinality_under_legacy_cap": 3,
+        "pool": "final_calibration",
+        "pool_size": 158,
+        "pool_source_group_count": 136,
+        "primary_selected_risk": false,
+        "requested_batch_size": 5,
+        "risk_score_formula": "0.5 * (1 - predicted_success) + 0.5 * normalized_binary_entropy",
+        "risk_score_interpretation": "benchmark-defined uncalibrated proxy"
+      },
+      {
+        "full_batch_cost_feasible": true,
+        "full_batch_risk_feasible": false,
+        "legacy_risk_contract_role": "stress_test_only",
+        "max_feasible_cardinality_under_cost_cap": 10,
+        "max_feasible_cardinality_under_legacy_cap": 6,
+        "pool": "final_calibration",
+        "pool_size": 158,
+        "pool_source_group_count": 136,
+        "primary_selected_risk": false,
+        "requested_batch_size": 10,
+        "risk_score_formula": "0.5 * (1 - predicted_success) + 0.5 * normalized_binary_entropy",
+        "risk_score_interpretation": "benchmark-defined uncalibrated proxy"
+      },
+      {
+        "full_batch_cost_feasible": true,
+        "full_batch_risk_feasible": false,
+        "legacy_risk_contract_role": "stress_test_only",
+        "max_feasible_cardinality_under_cost_cap": 20,
+        "max_feasible_cardinality_under_legacy_cap": 11,
+        "pool": "final_calibration",
+        "pool_size": 158,
+        "pool_source_group_count": 136,
+        "primary_selected_risk": false,
+        "requested_batch_size": 20,
+        "risk_score_formula": "0.5 * (1 - predicted_success) + 0.5 * normalized_binary_entropy",
+        "risk_score_interpretation": "benchmark-defined uncalibrated proxy"
+      },
+      {
+        "full_batch_cost_feasible": true,
+        "full_batch_risk_feasible": false,
+        "legacy_risk_contract_role": "stress_test_only",
+        "max_feasible_cardinality_under_cost_cap": 5,
+        "max_feasible_cardinality_under_legacy_cap": 2,
+        "pool": "final_test",
+        "pool_size": 193,
+        "pool_source_group_count": 173,
+        "primary_selected_risk": false,
+        "requested_batch_size": 5,
+        "risk_score_formula": "0.5 * (1 - predicted_success) + 0.5 * normalized_binary_entropy",
+        "risk_score_interpretation": "benchmark-defined uncalibrated proxy"
+      },
+      {
+        "full_batch_cost_feasible": true,
+        "full_batch_risk_feasible": false,
+        "legacy_risk_contract_role": "stress_test_only",
+        "max_feasible_cardinality_under_cost_cap": 10,
+        "max_feasible_cardinality_under_legacy_cap": 5,
+        "pool": "final_test",
+        "pool_size": 193,
+        "pool_source_group_count": 173,
+        "primary_selected_risk": false,
+        "requested_batch_size": 10,
+        "risk_score_formula": "0.5 * (1 - predicted_success) + 0.5 * normalized_binary_entropy",
+        "risk_score_interpretation": "benchmark-defined uncalibrated proxy"
+      },
+      {
+        "full_batch_cost_feasible": true,
+        "full_batch_risk_feasible": false,
+        "legacy_risk_contract_role": "stress_test_only",
+        "max_feasible_cardinality_under_cost_cap": 20,
+        "max_feasible_cardinality_under_legacy_cap": 11,
+        "pool": "final_test",
+        "pool_size": 193,
+        "pool_source_group_count": 173,
+        "primary_selected_risk": false,
+        "requested_batch_size": 20,
+        "risk_score_formula": "0.5 * (1 - predicted_success) + 0.5 * normalized_binary_entropy",
+        "risk_score_interpretation": "benchmark-defined uncalibrated proxy"
+      }
+    ],
+    "source_group": {
+      "active_calibration_doi_coverage": 1.0,
+      "active_calibration_row_count": 158,
+      "active_test_doi_coverage": 1.0,
+      "active_test_row_count": 193,
+      "active_train_row_count": 1394,
+      "active_training_doi_coverage": 1.0,
+      "calibration_doi_group_count": 136,
+      "excluded_train_source_overlap_doi_group_count": 270,
+      "excluded_train_source_overlap_row_count": 434,
+      "policy_calibration_test_source_doi_overlap_count": 0,
+      "schema_version": "v49-source-group-audit-1.0",
+      "source_group_basis": "normalized_source_doi",
+      "source_manifest": "data/processed/full_public_stability_source_manifest.csv",
+      "status": "PASS_COMPLETE_ACTIVE_SOURCE_GROUP_DISJOINT",
+      "test_doi_group_count": 173,
+      "train_calibration_source_doi_overlap_count": 0,
+      "train_test_source_doi_overlap_count": 0,
+      "training_doi_group_count": 865,
+      "training_rows_with_packaged_source_doi": 1394,
+      "training_rows_without_packaged_source_doi": 0,
+      "training_source_doi_complete": true
+    },
+    "source_overlap_C_ablation": [
+      {
+        "C": 0.001,
+        "diagnostic_only": true,
+        "evaluation_universe": "final_publication_source_disjoint_test",
+        "model_role": "current_source_group_cv_model",
+        "n_rows": 193,
+        "n_source_doi_groups": 173
+      },
+      {
+        "C": 0.001,
+        "diagnostic_only": true,
+        "evaluation_universe": "historical_overlap_inclusive_test",
+        "model_role": "current_source_group_cv_model",
+        "n_rows": 436,
+        "n_source_doi_groups": 322
+      },
+      {
+        "C": 3.0,
+        "diagnostic_only": true,
+        "evaluation_universe": "final_publication_source_disjoint_test",
+        "model_role": "historical_fixed_C_diagnostic_comparator",
+        "n_rows": 193,
+        "n_source_doi_groups": 173
+      },
+      {
+        "C": 3.0,
+        "diagnostic_only": true,
+        "evaluation_universe": "historical_overlap_inclusive_test",
+        "model_role": "historical_fixed_C_diagnostic_comparator",
+        "n_rows": 436,
+        "n_source_doi_groups": 322
+      }
+    ],
+    "test_source_group_bootstrap": {
+      "bootstrap_group_unit": "normalized_source_doi",
+      "confidence_interval": {
+        "confidence_level": 0.95,
+        "lower_percentile": 2.5,
+        "method": "percentile",
+        "upper_percentile": 97.5
+      },
+      "invalid_auc_resamples": 0,
+      "requested_resamples": 10000,
+      "seed": 45,
+      "source_group_count": 173,
+      "used_for_tuning": false,
+      "valid_auc_resamples": 10000
+    },
+    "thermal": {
+      "n_train": 2005,
+      "n_validation": 501,
+      "selected_alpha": 10.0
+    },
+    "traces": {
+      "cost_aware": {
+        "full_batch": true,
+        "full_batch_status": "full_batch",
+        "hits": 4,
+        "policy_contract": "cost_only",
+        "risk_budget_per_item": null,
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00431_ZASJAG",
+          "mofsimplify_solvent_val_00348_ZUQMAB",
+          "mofsimplify_solvent_test_00075_EBIJAC",
+          "mofsimplify_solvent_test_00384_WILHIK",
+          "mofsimplify_solvent_test_00146_ICITEU"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stepwise_decision_count": 5,
+        "stop_event_count": 0
+      },
+      "portfolio_batch": {
+        "full_batch": true,
+        "full_batch_status": "full_batch",
+        "hits": 3,
+        "policy_contract": "cost_only",
+        "risk_budget_per_item": null,
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00146_ICITEU",
+          "mofsimplify_solvent_test_00021_BADYAJ",
+          "mofsimplify_solvent_val_00290_VACLIX",
+          "mofsimplify_solvent_test_00327_SERWAP",
+          "mofsimplify_solvent_test_00036_BUPVEP"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stepwise_decision_count": 5,
+        "stop_event_count": 0
+      },
+      "random_baseline": {
+        "full_batch": true,
+        "full_batch_status": "full_batch",
+        "hits": 3,
+        "policy_contract": "cost_only",
+        "risk_budget_per_item": null,
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00186_KIYMIP",
+          "mofsimplify_solvent_val_00145_KILJEV",
+          "mofsimplify_solvent_test_00297_QOKCID",
+          "mofsimplify_solvent_val_00269_TEYLIU",
+          "mofsimplify_solvent_test_00178_KIDXUR"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stepwise_decision_count": 5,
+        "stop_event_count": 0
+      },
+      "top_score": {
+        "full_batch": true,
+        "full_batch_status": "full_batch",
+        "hits": 4,
+        "policy_contract": "cost_only",
+        "risk_budget_per_item": null,
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_val_00290_VACLIX",
+          "mofsimplify_solvent_test_00021_BADYAJ",
+          "mofsimplify_solvent_test_00036_BUPVEP",
+          "mofsimplify_solvent_test_00015_AVILEY",
+          "mofsimplify_solvent_test_00257_OKUSUK"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stepwise_decision_count": 5,
+        "stop_event_count": 0
+      },
+      "uncertainty": {
+        "full_batch": true,
+        "full_batch_status": "full_batch",
+        "hits": 4,
+        "policy_contract": "cost_only",
+        "risk_budget_per_item": null,
+        "selected_candidate_ids": [
+          "mofsimplify_solvent_test_00206_LUYSEF",
+          "mofsimplify_solvent_test_00186_KIYMIP",
+          "mofsimplify_solvent_val_00343_ZAHLEC",
+          "mofsimplify_solvent_test_00306_RAHMAP",
+          "mofsimplify_solvent_val_00072_EXAXAE"
+        ],
+        "selected_count": 5,
+        "selection_event_count": 5,
+        "stepwise_decision_count": 5,
+        "stop_event_count": 0
+      }
+    }
+  },
+  "numeric": {
+    "activation": {
+      "artifact_regeneration_max_abs_diff": 0.0,
+      "calibration_brier_score": 0.23858090147390099,
+      "calibration_roc_auc": 0.6262254901960784,
+      "dummy_most_frequent_accuracy": 0.5958549222797928,
+      "dummy_prior_accuracy": 0.5958549222797928,
+      "dummy_prior_brier": 0.24081474449269955,
+      "dummy_prior_roc_auc": 0.5,
+      "test_accuracy_at_0_5": 0.5647668393782384,
+      "test_brier_score": 0.25235809293375244,
+      "test_majority_class_fraction_descriptive": 0.5958549222797928,
+      "test_positive_fraction": 0.5958549222797928,
+      "test_roc_auc": 0.5216276477146042,
+      "test_source_group_bootstrap_auc_ci_high": 0.6173615515131285,
+      "test_source_group_bootstrap_auc_ci_low": 0.4270656562447315,
+      "test_source_group_bootstrap_auc_standard_error": 0.04869728123113028
+    },
+    "dummy_baselines": [
+      {
+        "accuracy": 0.5958549222797928,
+        "brier_score": 0.40414507772020725,
+        "predicted_positive_probability": 1.0,
+        "roc_auc": 0.5,
+        "strategy": "most_frequent",
+        "training_positive_fraction": 0.5975609756097561
+      },
+      {
+        "accuracy": 0.5958549222797928,
+        "brier_score": 0.24081474449269955,
+        "predicted_positive_probability": 0.5975609756097561,
+        "roc_auc": 0.5,
+        "strategy": "prior",
+        "training_positive_fraction": 0.5975609756097561
+      }
+    ],
+    "legacy_risk_stress": [
+      {
+        "batch_size": 5,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 1.0,
+        "mean_predicted_success": 0.5491989999999999,
+        "method": "cost_aware",
+        "proxy_cost_normalized_yield": 0.746348,
+        "risk_used": 1.443274,
+        "total_proxy_cost": 2.679715
+      },
+      {
+        "batch_size": 5,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.5,
+        "mean_predicted_success": 0.6668389999999998,
+        "method": "portfolio_batch",
+        "proxy_cost_normalized_yield": 0.2832549999999999,
+        "risk_used": 1.24813,
+        "total_proxy_cost": 3.530393
+      },
+      {
+        "batch_size": 5,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.0,
+        "mean_predicted_success": 0.4526,
+        "method": "random_baseline",
+        "proxy_cost_normalized_yield": 0.0,
+        "risk_used": 1.538113,
+        "total_proxy_cost": 3.307269
+      },
+      {
+        "batch_size": 5,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 1.0,
+        "mean_predicted_success": 0.700589,
+        "method": "top_score",
+        "proxy_cost_normalized_yield": 0.507429,
+        "risk_used": 1.179958,
+        "total_proxy_cost": 3.94144
+      },
+      {
+        "batch_size": 5,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 1.0,
+        "mean_predicted_success": 0.500302,
+        "method": "uncertainty",
+        "proxy_cost_normalized_yield": 0.674344,
+        "risk_used": 1.499697,
+        "total_proxy_cost": 2.965844
+      },
+      {
+        "batch_size": 10,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 1.0,
+        "mean_predicted_success": 0.5830199999999999,
+        "method": "cost_aware",
+        "proxy_cost_normalized_yield": 0.676753,
+        "risk_used": 3.466501,
+        "total_proxy_cost": 7.388216
+      },
+      {
+        "batch_size": 10,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.5999999999999999,
+        "mean_predicted_success": 0.673772,
+        "method": "portfolio_batch",
+        "proxy_cost_normalized_yield": 0.3235399999999999,
+        "risk_used": 3.086682,
+        "total_proxy_cost": 9.272431
+      },
+      {
+        "batch_size": 10,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.25,
+        "mean_predicted_success": 0.47527,
+        "method": "random_baseline",
+        "proxy_cost_normalized_yield": 0.157252,
+        "risk_used": 3.007137,
+        "total_proxy_cost": 6.359215
+      },
+      {
+        "batch_size": 10,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.8,
+        "mean_predicted_success": 0.6842409999999999,
+        "method": "top_score",
+        "proxy_cost_normalized_yield": 0.39439,
+        "risk_used": 3.036511,
+        "total_proxy_cost": 10.142236
+      },
+      {
+        "batch_size": 10,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.75,
+        "mean_predicted_success": 0.500225,
+        "method": "uncertainty",
+        "proxy_cost_normalized_yield": 0.503769,
+        "risk_used": 2.999546,
+        "total_proxy_cost": 5.955106
+      },
+      {
+        "batch_size": 20,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.666667,
+        "mean_predicted_success": 0.558733,
+        "method": "cost_aware",
+        "proxy_cost_normalized_yield": 0.4809249999999999,
+        "risk_used": 6.42594,
+        "total_proxy_cost": 12.475966
+      },
+      {
+        "batch_size": 20,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.5999999999999999,
+        "mean_predicted_success": 0.6308129999999998,
+        "method": "portfolio_batch",
+        "proxy_cost_normalized_yield": 0.3545889999999999,
+        "risk_used": 6.547143,
+        "total_proxy_cost": 16.92098
+      },
+      {
+        "batch_size": 20,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.555556,
+        "mean_predicted_success": 0.492346,
+        "method": "random_baseline",
+        "proxy_cost_normalized_yield": 0.250081,
+        "risk_used": 6.747304,
+        "total_proxy_cost": 19.993494
+      },
+      {
+        "batch_size": 20,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.636364,
+        "mean_predicted_success": 0.655154,
+        "method": "top_score",
+        "proxy_cost_normalized_yield": 0.317855,
+        "risk_used": 6.990513,
+        "total_proxy_cost": 22.022588
+      },
+      {
+        "batch_size": 20,
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.7777779999999999,
+        "mean_predicted_success": 0.49946,
+        "method": "uncertainty",
+        "proxy_cost_normalized_yield": 0.5334499999999999,
+        "risk_used": 6.752332,
+        "total_proxy_cost": 13.12214
+      }
+    ],
+    "locked_policy": {
+      "cost_budget_per_item": 2.3989165637663223,
+      "cost_scale_calibration_median": 1.599277709177548
+    },
+    "pca": {
+      "pc1_percent": 40.075724343939285,
+      "pc2_percent": 12.081325489441152
+    },
+    "policy_comparison": [
+      {
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.8,
+        "mean_predicted_success": 0.5705599999999998,
+        "method": "cost_aware",
+        "proxy_cost_normalized_yield": 0.571126,
+        "risk_used": 3.528885,
+        "total_proxy_cost": 7.003705
+      },
+      {
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.5999999999999999,
+        "mean_predicted_success": 0.673772,
+        "method": "portfolio_batch",
+        "proxy_cost_normalized_yield": 0.3235399999999999,
+        "risk_used": 3.086682,
+        "total_proxy_cost": 9.272431
+      },
+      {
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.5999999999999999,
+        "mean_predicted_success": 0.497638,
+        "method": "random_baseline",
+        "proxy_cost_normalized_yield": 0.38489,
+        "risk_used": 3.744652,
+        "total_proxy_cost": 7.794441
+      },
+      {
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.8,
+        "mean_predicted_success": 0.6842409999999999,
+        "method": "top_score",
+        "proxy_cost_normalized_yield": 0.39439,
+        "risk_used": 3.036511,
+        "total_proxy_cost": 10.142236
+      },
+      {
+        "cost_budget_per_item": 2.3989165637663223,
+        "hit_fraction": 0.8,
+        "mean_predicted_success": 0.500469,
+        "method": "uncertainty",
+        "proxy_cost_normalized_yield": 0.5354569999999998,
+        "risk_used": 3.748821,
+        "total_proxy_cost": 7.470256
+      }
+    ],
+    "pool_summary": [
+      {
+        "batch_size": 5,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.62,
+        "mean_hits": 3.1,
+        "mean_jaccard_to_full_test": 0.3386904761904762,
+        "mean_proxy_cost_normalized_yield": 0.44793785,
+        "mean_selected_count": 5.0,
+        "method": "cost_aware",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.170448325245358,
+        "sd_hits": 0.8522416262267903
+      },
+      {
+        "batch_size": 5,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.6099999999999999,
+        "mean_hits": 3.05,
+        "mean_jaccard_to_full_test": 0.3714285714285713,
+        "mean_proxy_cost_normalized_yield": 0.3588007,
+        "mean_selected_count": 5.0,
+        "method": "portfolio_batch",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.1372665482306519,
+        "sd_hits": 0.6863327411532597
+      },
+      {
+        "batch_size": 5,
+        "full_batch_rate": 0.99,
+        "mean_hit_fraction": 0.5955,
+        "mean_hits": 2.97,
+        "mean_jaccard_to_full_test": 0.0095833333333333,
+        "mean_proxy_cost_normalized_yield": 0.3567160049999999,
+        "mean_selected_count": 4.99,
+        "method": "random_baseline",
+        "n_pools": 20,
+        "n_records": 200,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.2160163543036341,
+        "sd_hits": 1.0746508139201758
+      },
+      {
+        "batch_size": 5,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.65,
+        "mean_hits": 3.25,
+        "mean_jaccard_to_full_test": 0.3589285714285713,
+        "mean_proxy_cost_normalized_yield": 0.3251508,
+        "mean_selected_count": 5.0,
+        "method": "top_score",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.1820930936000652,
+        "sd_hits": 0.910465468000326
+      },
+      {
+        "batch_size": 5,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.82,
+        "mean_hits": 4.1,
+        "mean_jaccard_to_full_test": 0.3099206349206349,
+        "mean_proxy_cost_normalized_yield": 0.5555785999999999,
+        "mean_selected_count": 5.0,
+        "method": "uncertainty",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.1281446551034375,
+        "sd_hits": 0.6407232755171874
+      },
+      {
+        "batch_size": 10,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.6049999999999999,
+        "mean_hits": 6.05,
+        "mean_jaccard_to_full_test": 0.3244747899159664,
+        "mean_proxy_cost_normalized_yield": 0.4358759499999999,
+        "mean_selected_count": 10.0,
+        "method": "cost_aware",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.1394538218230416,
+        "sd_hits": 1.394538218230416
+      },
+      {
+        "batch_size": 10,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.5749999999999998,
+        "mean_hits": 5.75,
+        "mean_jaccard_to_full_test": 0.3546398046398046,
+        "mean_proxy_cost_normalized_yield": 0.35333175,
+        "mean_selected_count": 10.0,
+        "method": "portfolio_batch",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.1208522368758424,
+        "sd_hits": 1.2085223687584248
+      },
+      {
+        "batch_size": 10,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.6135,
+        "mean_hits": 6.135,
+        "mean_jaccard_to_full_test": 0.0275197798417612,
+        "mean_proxy_cost_normalized_yield": 0.3694847999999999,
+        "mean_selected_count": 10.0,
+        "method": "random_baseline",
+        "n_pools": 20,
+        "n_records": 200,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.151268505658052,
+        "sd_hits": 1.5126850565805194
+      },
+      {
+        "batch_size": 10,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.55,
+        "mean_hits": 5.5,
+        "mean_jaccard_to_full_test": 0.3331878905408317,
+        "mean_proxy_cost_normalized_yield": 0.27850415,
+        "mean_selected_count": 10.0,
+        "method": "top_score",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.1357241785076592,
+        "sd_hits": 1.3572417850765923
+      },
+      {
+        "batch_size": 10,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.855,
+        "mean_hits": 8.55,
+        "mean_jaccard_to_full_test": 0.3446024563671622,
+        "mean_proxy_cost_normalized_yield": 0.5719323499999999,
+        "mean_selected_count": 10.0,
+        "method": "uncertainty",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.0759154654516248,
+        "sd_hits": 0.7591546545162483
+      },
+      {
+        "batch_size": 20,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.5799999999999998,
+        "mean_hits": 11.6,
+        "mean_jaccard_to_full_test": 0.3547161714766242,
+        "mean_proxy_cost_normalized_yield": 0.4060823499999999,
+        "mean_selected_count": 20.0,
+        "method": "cost_aware",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.0849148179989186,
+        "sd_hits": 1.6982963599783722
+      },
+      {
+        "batch_size": 20,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.5875,
+        "mean_hits": 11.75,
+        "mean_jaccard_to_full_test": 0.3492465841742816,
+        "mean_proxy_cost_normalized_yield": 0.3704134499999999,
+        "mean_selected_count": 20.0,
+        "method": "portfolio_batch",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.0957999560487757,
+        "sd_hits": 1.9159991209755156
+      },
+      {
+        "batch_size": 20,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.5975,
+        "mean_hits": 11.95,
+        "mean_jaccard_to_full_test": 0.0560417502522765,
+        "mean_proxy_cost_normalized_yield": 0.3568071599999999,
+        "mean_selected_count": 20.0,
+        "method": "random_baseline",
+        "n_pools": 20,
+        "n_records": 200,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.1066565897668939,
+        "sd_hits": 2.13313179533788
+      },
+      {
+        "batch_size": 20,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.5424999999999999,
+        "mean_hits": 10.85,
+        "mean_jaccard_to_full_test": 0.3176245438119743,
+        "mean_proxy_cost_normalized_yield": 0.29954785,
+        "mean_selected_count": 20.0,
+        "method": "top_score",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.1079412608295534,
+        "sd_hits": 2.1588252165910684
+      },
+      {
+        "batch_size": 20,
+        "full_batch_rate": 1.0,
+        "mean_hit_fraction": 0.7375,
+        "mean_hits": 14.75,
+        "mean_jaccard_to_full_test": 0.3312388477711057,
+        "mean_proxy_cost_normalized_yield": 0.4907219,
+        "mean_selected_count": 20.0,
+        "method": "uncertainty",
+        "n_pools": 20,
+        "n_records": 20,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hit_fraction": 0.0840973746382884,
+        "sd_hits": 1.6819474927657678
+      }
+    ],
+    "random_summary": [
+      {
+        "batch_size": 5,
+        "empirical_probability_hits_ge_top_score": 0.34,
+        "full_batch_rate": 0.99,
+        "mean_hits": 3.0,
+        "mean_proxy_cost_normalized_yield": 0.36252493,
+        "mean_selected_count": 4.99,
+        "n_runs": 100,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hits": 1.1281521496355325
+      },
+      {
+        "batch_size": 10,
+        "empirical_probability_hits_ge_top_score": 0.7099999999999999,
+        "full_batch_rate": 1.0,
+        "mean_hits": 6.14,
+        "mean_proxy_cost_normalized_yield": 0.36663221,
+        "mean_selected_count": 10.0,
+        "n_runs": 100,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hits": 1.6515679724663976
+      },
+      {
+        "batch_size": 20,
+        "empirical_probability_hits_ge_top_score": 0.64,
+        "full_batch_rate": 1.0,
+        "mean_hits": 11.94,
+        "mean_proxy_cost_normalized_yield": 0.3559575999999999,
+        "mean_selected_count": 20.0,
+        "n_runs": 100,
+        "policy_contract": "cost_only",
+        "risk_contract": "none",
+        "sd_hits": 2.145326138941173
+      }
+    ],
+    "risk_feasibility": [
+      {
+        "cost_budget_per_item": 2.3989165637663223,
+        "five_lowest_risk_values": [
+          0.49029503269502134,
+          0.4995755524361371,
+          0.5224287755644352,
+          0.5718629791207839,
+          0.5766734505136493
+        ],
+        "legacy_risk_budget_per_item": 0.3499999999999999,
+        "legacy_total_risk_cap": 1.75,
+        "max_feasible_cardinality_under_cost_cap": 5,
+        "minimum_cost_budget_per_item_for_full_batch": 1.3084299149886576,
+        "minimum_possible_total_cost_for_exact_batch": 6.542149574943288,
+        "minimum_possible_total_risk_for_exact_batch": 2.660835790330027,
+        "minimum_risk_budget_per_item_for_full_batch": 0.5321671580660053,
+        "pool": "final_calibration",
+        "requested_batch_size": 5,
+        "total_cost_cap": 11.994582818831612
+      },
+      {
+        "cost_budget_per_item": 2.3989165637663223,
+        "five_lowest_risk_values": [],
+        "legacy_risk_budget_per_item": 0.3499999999999999,
+        "legacy_total_risk_cap": 3.5,
+        "max_feasible_cardinality_under_cost_cap": 10,
+        "minimum_cost_budget_per_item_for_full_batch": 1.3334610916565732,
+        "minimum_possible_total_cost_for_exact_batch": 13.334610916565731,
+        "minimum_possible_total_risk_for_exact_batch": 5.862151775009001,
+        "minimum_risk_budget_per_item_for_full_batch": 0.5862151775009001,
+        "pool": "final_calibration",
+        "requested_batch_size": 10,
+        "total_cost_cap": 23.989165637663223
+      },
+      {
+        "cost_budget_per_item": 2.3989165637663223,
+        "five_lowest_risk_values": [],
+        "legacy_risk_budget_per_item": 0.3499999999999999,
+        "legacy_total_risk_cap": 7.0,
+        "max_feasible_cardinality_under_cost_cap": 20,
+        "minimum_cost_budget_per_item_for_full_batch": 1.3666989070977436,
+        "minimum_possible_total_cost_for_exact_batch": 27.333978141954876,
+        "minimum_possible_total_risk_for_exact_batch": 12.627759277957988,
+        "minimum_risk_budget_per_item_for_full_batch": 0.6313879638978994,
+        "pool": "final_calibration",
+        "requested_batch_size": 20,
+        "total_cost_cap": 47.97833127532645
+      },
+      {
+        "cost_budget_per_item": 2.3989165637663223,
+        "five_lowest_risk_values": [
+          0.5870855647173878,
+          0.5928728513047501,
+          0.6042608528416897,
+          0.6193271071813049,
+          0.6329643642527845
+        ],
+        "legacy_risk_budget_per_item": 0.3499999999999999,
+        "legacy_total_risk_cap": 1.75,
+        "max_feasible_cardinality_under_cost_cap": 5,
+        "minimum_cost_budget_per_item_for_full_batch": 1.310973878897443,
+        "minimum_possible_total_cost_for_exact_batch": 6.554869394487215,
+        "minimum_possible_total_risk_for_exact_batch": 3.036510740297917,
+        "minimum_risk_budget_per_item_for_full_batch": 0.6073021480595833,
+        "pool": "final_test",
+        "requested_batch_size": 5,
+        "total_cost_cap": 11.994582818831612
+      },
+      {
+        "cost_budget_per_item": 2.3989165637663223,
+        "five_lowest_risk_values": [],
+        "legacy_risk_budget_per_item": 0.3499999999999999,
+        "legacy_total_risk_cap": 3.5,
+        "max_feasible_cardinality_under_cost_cap": 10,
+        "minimum_cost_budget_per_item_for_full_batch": 1.3332298994079763,
+        "minimum_possible_total_cost_for_exact_batch": 13.332298994079762,
+        "minimum_possible_total_risk_for_exact_batch": 6.3055524326525445,
+        "minimum_risk_budget_per_item_for_full_batch": 0.6305552432652544,
+        "pool": "final_test",
+        "requested_batch_size": 10,
+        "total_cost_cap": 23.989165637663223
+      },
+      {
+        "cost_budget_per_item": 2.3989165637663223,
+        "five_lowest_risk_values": [],
+        "legacy_risk_budget_per_item": 0.3499999999999999,
+        "legacy_total_risk_cap": 7.0,
+        "max_feasible_cardinality_under_cost_cap": 20,
+        "minimum_cost_budget_per_item_for_full_batch": 1.3551771189271715,
+        "minimum_possible_total_cost_for_exact_batch": 27.10354237854343,
+        "minimum_possible_total_risk_for_exact_batch": 13.260559640646555,
+        "minimum_risk_budget_per_item_for_full_batch": 0.6630279820323278,
+        "pool": "final_test",
+        "requested_batch_size": 20,
+        "total_cost_cap": 47.97833127532645
+      }
+    ],
+    "source_overlap_C_ablation": [
+      {
+        "C": 0.001,
+        "accuracy_at_0_5": 0.5647668393782384,
+        "brier_score": 0.2523580929337524,
+        "evaluation_universe": "final_publication_source_disjoint_test",
+        "roc_auc": 0.5216276477146042
+      },
+      {
+        "C": 0.001,
+        "accuracy_at_0_5": 0.5619266055045871,
+        "brier_score": 0.2443527511082831,
+        "evaluation_universe": "historical_overlap_inclusive_test",
+        "roc_auc": 0.5760059126578702
+      },
+      {
+        "C": 3.0,
+        "accuracy_at_0_5": 0.5233160621761657,
+        "brier_score": 0.273401028753782,
+        "evaluation_universe": "final_publication_source_disjoint_test",
+        "roc_auc": 0.5288740245261984
+      },
+      {
+        "C": 3.0,
+        "accuracy_at_0_5": 0.6009174311926605,
+        "brier_score": 0.2366908033457279,
+        "evaluation_universe": "historical_overlap_inclusive_test",
+        "roc_auc": 0.6374366889115927
+      }
+    ],
+    "source_overlap_C_ablation_deltas": {
+      "C_effect_on_overlap_inclusive_test": -0.06143077625372251,
+      "C_effect_on_source_disjoint_test": -0.007246376811594235,
+      "affects_selected_C": false,
+      "claim_boundary": "post-hoc publication-source diagnostic; no chemical-family, structural-similarity, or causal leakage claim",
+      "delta_definition": {
+        "C_effect": "ROC-AUC(C=0.001) - ROC-AUC(C=3.0) at fixed universe",
+        "split_effect": "ROC-AUC(final_publication_source_disjoint_test) - ROC-AUC(historical_overlap_inclusive_test) at fixed C"
+      },
+      "diagnostic_only": true,
+      "fixed_C_values": [
+        0.001,
+        3.0
+      ],
+      "historical_test_excluded_for_train_source_overlap": [
+        {
+          "C": 3.0,
+          "accuracy_at_0_5": 0.6625514403292181,
+          "brier_score": 0.2075341222603188,
+          "diagnostic_only": true,
+          "evaluation_universe": "historical_test_excluded_for_train_source_overlap",
+          "model_role": "historical_fixed_C_diagnostic_comparator",
+          "n_rows": 243,
+          "n_source_doi_groups": 149,
+          "roc_auc": 0.7185887602844792
+        },
+        {
+          "C": 0.001,
+          "accuracy_at_0_5": 0.5596707818930041,
+          "brier_score": 0.23799459895883626,
+          "diagnostic_only": true,
+          "evaluation_universe": "historical_test_excluded_for_train_source_overlap",
+          "model_role": "current_source_group_cv_model",
+          "n_rows": 243,
+          "n_source_doi_groups": 149,
+          "roc_auc": 0.6222981453074885
+        }
+      ],
+      "schema_version": "v49-source-overlap-C-ablation-1.0",
+      "selected_C_before_and_after_diagnostic": 0.001,
+      "source_universe_reduction_larger_than_fixed_C_effect": false,
+      "split_effect_at_C_0p001": -0.05437826494326603,
+      "split_effect_at_C_3": -0.1085626643853943,
+      "status": "PASS"
+    },
+    "test_source_group_bootstrap": {
+      "metrics": {
+        "accuracy_at_0_5": {
+          "bootstrap_standard_error": 0.03839280738025255,
+          "percentile_2_5": 0.4898989898989899,
+          "percentile_97_5": 0.6391752577319587,
+          "point_estimate": 0.5647668393782384,
+          "valid_resamples": 10000
+        },
+        "brier_score": {
+          "bootstrap_standard_error": 0.005297822183095127,
+          "percentile_2_5": 0.24210881961497632,
+          "percentile_97_5": 0.26279992156632803,
+          "point_estimate": 0.25235809293375244,
+          "valid_resamples": 10000
+        },
+        "roc_auc": {
+          "bootstrap_standard_error": 0.04869728123113028,
+          "percentile_2_5": 0.4270656562447315,
+          "percentile_97_5": 0.6173615515131285,
+          "point_estimate": 0.5216276477146042,
+          "valid_resamples": 10000
+        }
+      },
+      "point_estimates": {
+        "accuracy_at_0_5": 0.5647668393782384,
+        "brier_score": 0.25235809293375244,
+        "roc_auc": 0.5216276477146042
+      }
+    },
+    "thermal": {
+      "mae_C": 57.63407464689271,
+      "r2": 0.29214640576190565,
+      "rmse_C": 72.15617759908068,
+      "training_mean_baseline_rmse_C": 86.04225283413092
+    },
+    "traces": {
+      "cost_aware": {
+        "hit_fraction": 0.8,
+        "mean_predicted_success": 0.57056,
+        "proxy_cost_normalized_yield": 0.571126,
+        "risk_used": 3.528885,
+        "total_proxy_cost": 7.003705
+      },
+      "portfolio_batch": {
+        "hit_fraction": 0.6,
+        "mean_predicted_success": 0.673772,
+        "proxy_cost_normalized_yield": 0.32354,
+        "risk_used": 3.086682,
+        "total_proxy_cost": 9.272431
+      },
+      "random_baseline": {
+        "hit_fraction": 0.6,
+        "mean_predicted_success": 0.497638,
+        "proxy_cost_normalized_yield": 0.38489,
+        "risk_used": 3.744652,
+        "total_proxy_cost": 7.794441
+      },
+      "top_score": {
+        "hit_fraction": 0.8,
+        "mean_predicted_success": 0.684241,
+        "proxy_cost_normalized_yield": 0.39439,
+        "risk_used": 3.036511,
+        "total_proxy_cost": 10.142236
+      },
+      "uncertainty": {
+        "hit_fraction": 0.8,
+        "mean_predicted_success": 0.500469,
+        "proxy_cost_normalized_yield": 0.535457,
+        "risk_used": 3.748821,
+        "total_proxy_cost": 7.470256
+      }
+    }
+  },
+  "schema_version": "4.0"
+}

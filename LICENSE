@@ -1,0 +1,5 @@
+Licensing is split by content type:
+
+- Software and code: see LICENSE-CODE (MIT).
+- Derived data and figure source data: see LICENSE-DATA (CC BY 4.0).
+- Third-party and upstream notices: see THIRD_PARTY_NOTICES.md.

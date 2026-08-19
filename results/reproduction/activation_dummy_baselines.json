@@ -1,0 +1,34 @@
+{
+  "baselines": [
+    {
+      "accuracy": 0.5958549222797928,
+      "brier_score": 0.24081474449269955,
+      "evaluation_split": "final_publication_source_disjoint_test",
+      "fit_split": "train",
+      "predicted_positive_probability": 0.5975609756097561,
+      "roc_auc": 0.5,
+      "strategy": "prior",
+      "test_n": 193,
+      "training_majority_class": 1,
+      "training_n": 1394,
+      "training_positive_fraction": 0.5975609756097561
+    },
+    {
+      "accuracy": 0.5958549222797928,
+      "brier_score": 0.40414507772020725,
+      "evaluation_split": "final_publication_source_disjoint_test",
+      "fit_split": "train",
+      "predicted_positive_probability": 1.0,
+      "roc_auc": 0.5,
+      "strategy": "most_frequent",
+      "test_n": 193,
+      "training_majority_class": 1,
+      "training_n": 1394,
+      "training_positive_fraction": 0.5975609756097561
+    }
+  ],
+  "evaluation_split": "final_publication_source_disjoint_test",
+  "fit_split": "train",
+  "schema_version": "v49-training-fitted-dummy-baselines-1.0",
+  "test_class_prevalence_used_for_baseline_selection": false
+}

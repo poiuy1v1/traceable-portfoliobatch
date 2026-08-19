@@ -1,0 +1,129 @@
+{
+  "active_doi_coverage": {
+    "calibration": 1.0,
+    "test": 1.0,
+    "train": 1.0
+  },
+  "all_active_pairwise_checks_pass": true,
+  "all_exact_identity_checks_pass": true,
+  "candidate_level_pass": true,
+  "checks": {
+    "candidate_id": {
+      "examples": [],
+      "overlap_count": 0
+    },
+    "raw_refcode": {
+      "examples": [],
+      "overlap_count": 0
+    },
+    "raw_source_row_identity": {
+      "definition": "raw_source_file::raw_source_row composite key",
+      "examples": [],
+      "overlap_count": 0
+    }
+  },
+  "chemical_group_leakage": {
+    "reason": "topology_family, metal_node and linker_family labels are not available for the full train, calibration and test feature tables",
+    "status": "not_evaluated"
+  },
+  "excluded_train_source_overlap": {
+    "candidate_id_examples": [
+      "mofsimplify_solvent_val_00001_ABEXUC",
+      "mofsimplify_solvent_val_00002_ABEYIR",
+      "mofsimplify_solvent_val_00003_CAKYIY",
+      "mofsimplify_solvent_val_00005_AHOJUC",
+      "mofsimplify_solvent_val_00006_AMIMAL",
+      "mofsimplify_solvent_val_00008_ANUGIA",
+      "mofsimplify_solvent_val_00011_ATICAH",
+      "mofsimplify_solvent_val_00015_AXUHEH",
+      "mofsimplify_solvent_val_00016_AXUHIL",
+      "mofsimplify_solvent_val_00018_BAKJOO",
+      "mofsimplify_solvent_val_00020_ICAROV",
+      "mofsimplify_solvent_val_00022_BEFMUW",
+      "mofsimplify_solvent_val_00024_BETGIS",
+      "mofsimplify_solvent_val_00025_BETGOY",
+      "mofsimplify_solvent_val_00029_BONWIL",
+      "mofsimplify_solvent_val_00036_CUKXIR",
+      "mofsimplify_solvent_val_00037_CUWNOZ",
+      "mofsimplify_solvent_val_00040_DAWCIP",
+      "mofsimplify_solvent_val_00042_DIMKUH",
+      "mofsimplify_solvent_val_00045_DOYHOQ"
+    ],
+    "doi_group_count": 270,
+    "row_count": 434
+  },
+  "missing_provenance_rows": 0,
+  "pairwise_active_split_checks": {
+    "calibration_vs_test": {
+      "candidate_id": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "raw_refcode": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "raw_source_row_identity": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "source_doi_normalized": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "source_group_id": {
+        "examples": [],
+        "overlap_count": 0
+      }
+    },
+    "train_vs_calibration": {
+      "candidate_id": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "raw_refcode": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "raw_source_row_identity": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "source_doi_normalized": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "source_group_id": {
+        "examples": [],
+        "overlap_count": 0
+      }
+    },
+    "train_vs_test": {
+      "candidate_id": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "raw_refcode": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "raw_source_row_identity": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "source_doi_normalized": {
+        "examples": [],
+        "overlap_count": 0
+      },
+      "source_group_id": {
+        "examples": [],
+        "overlap_count": 0
+      }
+    }
+  },
+  "raw_refcode_pass": true,
+  "raw_source_row_pass": true,
+  "schema_version": "v45A3-full-source-leakage-audit-1.0",
+  "scope": "active train/calibration/test pairwise identity and source DOI audit",
+  "split_column": "final_evaluation_split"
+}

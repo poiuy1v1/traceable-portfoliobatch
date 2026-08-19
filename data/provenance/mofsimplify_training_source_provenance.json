@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "upstream_repository": "hjkgrp/MOFSimplify",
+  "upstream_commit": "5693968b3e9b9e26eab3bdb1db908ae2877d4bb7",
+  "upstream_relative_path": "model/solvent/ANN/dropped_connectivity_dupes/train.csv",
+  "upstream_git_blob_sha1": "dc67ae0a5b72863cdc8c6850257dab40ede74b1c",
+  "raw_file_sha256": "fb62d307feac907d63de7bb2bcfd2880abaa60b751c185f78a3556ae20b88165",
+  "raw_file_size_bytes": 1509468,
+  "row_count": 1394,
+  "dataset_doi": "10.5281/zenodo.5736562",
+  "mofsimplify_dataset_version": "1.1.0",
+  "retrieved_at_utc": "2026-08-09T11:16:16.761086+00:00",
+  "raw_url": "https://raw.githubusercontent.com/hjkgrp/MOFSimplify/5693968b3e9b9e26eab3bdb1db908ae2877d4bb7/model/solvent/ANN/dropped_connectivity_dupes/train.csv",
+  "github_metadata_url": "https://api.github.com/repos/hjkgrp/MOFSimplify/contents/model/solvent/ANN/dropped_connectivity_dupes/train.csv?ref=5693968b3e9b9e26eab3bdb1db908ae2877d4bb7",
+  "reconstruction": {
+    "download": "Download the raw_url at the immutable upstream_commit; do not use a moving branch.",
+    "authenticate": "Require both GitHub Contents API blob metadata and an independently reconstructed Git blob-object SHA-1 to equal upstream_git_blob_sha1, and require raw SHA-256 to equal raw_file_sha256.",
+    "derive": "Run scripts/backfill_train_source_doi.py with --require-official-git-blob-sha and --expected-raw-sha256. The upstream raw CSV is not redistributed in this repository."
+  }
+}

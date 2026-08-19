@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "Traceable batch decision layer for MOF activation stability screening"
+message: "Version 1.0.0 release metadata candidate. Cite the archived release once its persistent identifier has been minted."
+type: software
+version: "1.0.0"
+authors:
+  - family-names: "Wei"
+    given-names: "Jinnan"
+    affiliation: "Yusuf Hamied Department of Chemistry, University of Cambridge"
+  - family-names: "Wheatley"
+    given-names: "Andrew E. H."
+    affiliation: "Yusuf Hamied Department of Chemistry, University of Cambridge"
+license: MIT
+keywords:
+  - metal-organic frameworks
+  - materials informatics
+  - provenance
+  - within-batch selection
+  - reproducibility
+references:
+  - type: dataset
+    title: "MOFSimplify: Machine Learning Models with Extracted Stability Data of Three Thousand Metal-Organic Frameworks"
+    doi: "10.5281/zenodo.5736562"
+    authors:
+      - family-names: "Nandy"
+        given-names: "Aditya"

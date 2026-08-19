@@ -1,0 +1,18 @@
+FROM python:3.13.5-slim-bookworm@sha256:4c2cf9917bd1cbacc5e9b07320025bdb7cdf2df7b0ceaccb55e9dd7e30987419
+
+ENV PYTHONHASHSEED=0 \
+    SOURCE_DATE_EPOCH=1785369600 \
+    OPENBLAS_CORETYPE=Haswell \
+    OPENBLAS_NUM_THREADS=1 \
+    OMP_NUM_THREADS=1 \
+    MKL_NUM_THREADS=1 \
+    NUMEXPR_NUM_THREADS=1 \
+    MPLCONFIGDIR=/tmp/matplotlib \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /workspace
+COPY requirements-canonical.txt /tmp/requirements-canonical.txt
+RUN python -m pip install --no-cache-dir -r /tmp/requirements-canonical.txt && python -m pip check
+COPY . /workspace
+CMD ["sh", "-ceu", "python scripts/determine_numpy_avx512_features.py --require-unset --shell-env /tmp/paper13-cpu-dispatch.env --json-output /tmp/paper13-numpy-discovery.json; . /tmp/paper13-cpu-dispatch.env; python scripts/check_canonical_cpu_dispatch.py --json-output /tmp/paper13-cpu-dispatch-gate.json; python scripts/check_clean_reproduction.py --mode canonical"]

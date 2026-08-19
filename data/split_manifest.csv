@@ -1,0 +1,3 @@
+endpoint,split_source,notes
+activation,data/derived/full_public_stability_features_relocked.csv,1394 train; 158 DOI-group policy calibration; 193 DOI-group-disjoint test; 434 provenance-only train-source-overlap exclusions
+thermal,data/processed/full_public_thermal_features.csv,2005 train; 501 validation

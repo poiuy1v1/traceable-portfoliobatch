@@ -1,0 +1,43 @@
+{
+  "bootstrap_group_unit": "normalized_source_doi",
+  "confidence_interval": {
+    "confidence_level": 0.95,
+    "lower_percentile": 2.5,
+    "method": "percentile",
+    "upper_percentile": 97.5
+  },
+  "invalid_auc_resamples": 0,
+  "metrics": {
+    "accuracy_at_0_5": {
+      "bootstrap_standard_error": 0.03839280738025255,
+      "percentile_2_5": 0.4898989898989899,
+      "percentile_97_5": 0.6391752577319587,
+      "point_estimate": 0.5647668393782384,
+      "valid_resamples": 10000
+    },
+    "brier_score": {
+      "bootstrap_standard_error": 0.005297822183095127,
+      "percentile_2_5": 0.24210881961497632,
+      "percentile_97_5": 0.26279992156632803,
+      "point_estimate": 0.25235809293375244,
+      "valid_resamples": 10000
+    },
+    "roc_auc": {
+      "bootstrap_standard_error": 0.04869728123113028,
+      "percentile_2_5": 0.4270656562447315,
+      "percentile_97_5": 0.6173615515131285,
+      "point_estimate": 0.5216276477146042,
+      "valid_resamples": 10000
+    }
+  },
+  "point_estimates": {
+    "accuracy_at_0_5": 0.5647668393782384,
+    "brier_score": 0.25235809293375244,
+    "roc_auc": 0.5216276477146042
+  },
+  "requested_resamples": 10000,
+  "seed": 45,
+  "source_group_count": 173,
+  "used_for_tuning": false,
+  "valid_auc_resamples": 10000
+}

@@ -1,0 +1,3 @@
+strategy,fit_split,evaluation_split,training_n,training_positive_fraction,training_majority_class,test_n,accuracy,roc_auc,brier_score,predicted_positive_probability
+prior,train,final_publication_source_disjoint_test,1394,0.59756097560975607,1,193,0.59585492227979275,0.5,0.24081474449269955,0.59756097560975607
+most_frequent,train,final_publication_source_disjoint_test,1394,0.59756097560975607,1,193,0.59585492227979275,0.5,0.40414507772020725,1

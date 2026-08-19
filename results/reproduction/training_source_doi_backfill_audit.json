@@ -1,0 +1,37 @@
+{
+  "active_source_doi_group_overlaps": {
+    "calibration_test": 0,
+    "train_calibration": 0,
+    "train_test": 0
+  },
+  "excluded_train_source_overlap_doi_group_count": 270,
+  "inputs": {
+    "features": "data\\processed\\full_public_stability_features.csv",
+    "source_manifest": "data\\processed\\full_public_stability_source_manifest.csv"
+  },
+  "output_source_manifest": "data\\processed\\full_public_stability_source_manifest.csv",
+  "rows": {
+    "all": 2179,
+    "ambiguous_or_conflicting": 0,
+    "calibration_test": 785,
+    "excluded_train_source_overlap": 434,
+    "final_calibration": 158,
+    "final_test": 193,
+    "final_train": 1394,
+    "held_rows_preserved": 785,
+    "train": 1394,
+    "training_rows_with_doi": 1394,
+    "unresolved": 0
+  },
+  "runner_command": "python scripts/run_full_reproduction.py --source-manifest data/processed/full_public_stability_source_manifest.csv",
+  "status": "PASS",
+  "upstream": {
+    "blob_url": "https://github.com/hjkgrp/MOFSimplify/blob/5693968b3e9b9e26eab3bdb1db908ae2877d4bb7/model/solvent/ANN/dropped_connectivity_dupes/train.csv",
+    "commit": "5693968b3e9b9e26eab3bdb1db908ae2877d4bb7",
+    "expected_git_blob_sha1": "dc67ae0a5b72863cdc8c6850257dab40ede74b1c",
+    "expected_raw_sha256": "fb62d307feac907d63de7bb2bcfd2880abaa60b751c185f78a3556ae20b88165",
+    "observed_git_blob_sha1": "dc67ae0a5b72863cdc8c6850257dab40ede74b1c",
+    "observed_raw_sha256": "fb62d307feac907d63de7bb2bcfd2880abaa60b751c185f78a3556ae20b88165",
+    "relative_path": "model/solvent/ANN/dropped_connectivity_dupes/train.csv"
+  }
+}

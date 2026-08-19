@@ -1,0 +1,10 @@
+{
+  "mae_C": 57.63407464689271,
+  "n_train": 2005,
+  "n_validation": 501,
+  "r2": 0.29214640576190565,
+  "rmse_C": 72.15617759908068,
+  "selected_alpha": 10.0,
+  "training_mean_baseline_C": 356.8837051048479,
+  "training_mean_baseline_rmse_C": 86.04225283413092
+}

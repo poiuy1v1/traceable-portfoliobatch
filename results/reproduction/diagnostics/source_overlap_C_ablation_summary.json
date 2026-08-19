@@ -1,0 +1,45 @@
+{
+  "C_effect_on_overlap_inclusive_test": -0.06143077625372251,
+  "C_effect_on_source_disjoint_test": -0.007246376811594235,
+  "affects_selected_C": false,
+  "claim_boundary": "post-hoc publication-source diagnostic; no chemical-family, structural-similarity, or causal leakage claim",
+  "delta_definition": {
+    "C_effect": "ROC-AUC(C=0.001) - ROC-AUC(C=3.0) at fixed universe",
+    "split_effect": "ROC-AUC(final_publication_source_disjoint_test) - ROC-AUC(historical_overlap_inclusive_test) at fixed C"
+  },
+  "diagnostic_only": true,
+  "fixed_C_values": [
+    0.001,
+    3.0
+  ],
+  "historical_test_excluded_for_train_source_overlap": [
+    {
+      "C": 3.0,
+      "accuracy_at_0_5": 0.6625514403292181,
+      "brier_score": 0.2075341222603188,
+      "diagnostic_only": true,
+      "evaluation_universe": "historical_test_excluded_for_train_source_overlap",
+      "model_role": "historical_fixed_C_diagnostic_comparator",
+      "n_rows": 243,
+      "n_source_doi_groups": 149,
+      "roc_auc": 0.7185887602844792
+    },
+    {
+      "C": 0.001,
+      "accuracy_at_0_5": 0.5596707818930041,
+      "brier_score": 0.23799459895883626,
+      "diagnostic_only": true,
+      "evaluation_universe": "historical_test_excluded_for_train_source_overlap",
+      "model_role": "current_source_group_cv_model",
+      "n_rows": 243,
+      "n_source_doi_groups": 149,
+      "roc_auc": 0.6222981453074885
+    }
+  ],
+  "schema_version": "v49-source-overlap-C-ablation-1.0",
+  "selected_C_before_and_after_diagnostic": 0.001,
+  "source_universe_reduction_larger_than_fixed_C_effect": false,
+  "split_effect_at_C_0p001": -0.05437826494326603,
+  "split_effect_at_C_3": -0.1085626643853943,
+  "status": "PASS"
+}

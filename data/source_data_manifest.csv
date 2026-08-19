@@ -1,0 +1,41 @@
+file_path,role,required
+data/processed/full_public_stability_features.csv,frozen activation train/calibration/test descriptors,yes
+data/processed/full_public_stability_source_manifest.csv,canonical all-split source identity and DOI manifest,yes
+data/provenance/mofsimplify_training_source_provenance.json,authenticated official training DOI source provenance,yes
+data/derived/full_public_stability_features_relocked.csv,derived DOI-group relocked split consumed by scoring and traces,yes
+data/processed/full_public_stability_manifest_scored.csv,calibration/test score manifest,yes
+results/reproduction/tuning/locked_parameters.json,train-selected model and calibration-selected policy parameters,yes
+results/reproduction/tuning/v49_locked_parameters_before_test.json,authoritative hash-bound cost-only model and policy lock written before any v49 test evaluation,yes
+results/reproduction/tuning/activation_C_train_internal_SOURCE_GROUP_CV.csv,training-only source-DOI-group model selection,yes
+results/reproduction/tuning/activation_train_group_cv_fold_audit.csv,per-fold DOI overlap class-balance and row-count audit,yes
+results/reproduction/tuning/portfolio_policy_cost_only_calibration_selection.csv,calibration-only 27-configuration cost-only policy selection,yes
+results/reproduction/tuning/portfolio_policy_cost_only_group_bootstrap_stability.csv,publication-source-group bootstrap stability of the locked cost-only policy,yes
+results/reproduction/train_held_source_overlap_exclusions.csv,held rows retained as provenance-only because their source DOI occurs in training,yes
+models/activation_logistic_train_split.json,activation model preprocessing coefficients and convergence metadata,yes
+results/reproduction/diagnostics/source_overlap_C_ablation.csv,post-lock fixed-C by source-universe diagnostic table,yes
+results/reproduction/diagnostics/source_overlap_C_ablation_summary.json,post-lock fixed-C diagnostic deltas and claim boundary,yes
+results/reproduction/activation_dummy_baselines.json,training-fitted prior and most-frequent DummyClassifier baselines,yes
+results/reproduction/activation_test_source_group_bootstrap_raw.csv,10000 final-test source-DOI-group bootstrap resamples,yes
+results/reproduction/activation_test_source_group_bootstrap_summary.json,percentile uncertainty summary for final-test model metrics,yes
+results/reproduction/risk_feasibility_audit.csv,exact legacy-risk and primary-cost mathematical feasibility audit,yes
+results/reproduction/test_policy_comparison_primary_cost_only.csv,primary final-test full-batch comparison under the locked cost-only contract,yes
+results/reproduction/random_baseline_primary_cost_only_raw.csv,raw full-pool random observations under the primary cost-only contract,yes
+results/reproduction/random_baseline_primary_cost_only_summary.csv,full-pool random summary under the primary cost-only contract,yes
+results/reproduction/test_pool_resampling_primary_cost_only_raw.csv,raw DOI-group pool resampling under the primary cost-only contract,yes
+results/reproduction/test_pool_resampling_primary_cost_only_summary.csv,candidate-pool sensitivity summary under the primary cost-only contract,yes
+results/reproduction/diagnostics/test_policy_risk_stress_legacy_0p35.csv,legacy 0.35 hard-risk sensitivity stress test not used as the primary comparison,yes
+results/reproduction/v49_statistical_summary.json,combined four-task point uncertainty feasibility and selector summary,yes
+source_data/source_overlap_C_ablation_source.csv,source data for the fixed-C by source-universe diagnostic,yes
+source_data/activation_dummy_baselines_source.csv,source data for training-fitted DummyClassifier comparators,yes
+source_data/activation_test_source_group_bootstrap_source.csv,source data for final-test source-group bootstrap uncertainty,yes
+source_data/risk_feasibility_audit_source.csv,source data for exact risk and cost feasibility audits,yes
+results/reproduction/leakage_audit.json,exact identity split audit,yes
+results/reproduction/source_group_audit.json,complete active source-DOI group coverage and disjointness audit,yes
+results/reproduction/generated_artifact_manifest.json,byte-level generated-artifact regression contract,yes
+results/reproduction/regression_reference.json,scientific semantic regression contract,yes
+data/processed/full_public_thermal_features.csv,secondary thermal train/validation descriptors,yes
+models/thermal_ridge_train_split.json,secondary thermal model artifact,yes
+results/reproduction/regression_contract.json,cross-platform regression comparison classes and tolerances,yes
+requirements-canonical.txt,exact direct and transitive dependencies for canonical Linux reproduction,yes
+Dockerfile.canonical,pinned canonical Linux container definition,yes
+docs/cross_platform_regression_contract.md,reader-facing regression contract documentation,yes

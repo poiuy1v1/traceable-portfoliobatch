@@ -1,0 +1,5 @@
+metric,value,unit
+MAE,57.634074646892707,degrees C
+RMSE,72.156177599080678,degrees C
+training-mean baseline RMSE,86.04225283413092,degrees C
+R2,0.29214640576190565,dimensionless

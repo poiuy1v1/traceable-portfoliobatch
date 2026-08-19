@@ -1,0 +1,503 @@
+{
+  "comparison_policy": {
+    "canonical_byte_identity": "required only in the pinned canonical Linux environment for files labelled canonical_byte_identity",
+    "cross_platform_exact": "candidate identities, split sizes, selected C, selected counts, hits, trace event counts and schemas must match exactly",
+    "cross_platform_numeric": "field-specific absolute tolerances defined in results/reproduction/regression_contract.json",
+    "self_coverage": "results/reproduction/generated_artifact_manifest.json, results/reproduction/regression_reference.json, results/reproduction/regression_contract.json and results/reproduction/runtime_diagnostics.json are excluded to avoid self-referential hashing and are covered by package-level manifests",
+    "visual_equivalence": "figure dimensions and bounded rendered-pixel differences; PDF/SVG byte identity is not a platform-neutral scientific requirement"
+  },
+  "file_count": 98,
+  "files": {
+    "data/derived/full_public_stability_features_relocked.csv": {
+      "bytes": 4477982,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "d334270b4b26b30addb3a7d09fe37ba05b8711b8e6671e64ec5be51bfcaaf44b"
+    },
+    "data/processed/full_public_stability_manifest_scored.csv": {
+      "bytes": 239350,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "67279fc5673d228112891a4bbd7a946fab2fbb9d8234bbccbd1e02021ed73ef1"
+    },
+    "data/processed/full_public_thermal_model_scores.csv": {
+      "bytes": 48477,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "5e4ccae6e36e6cc17f5d4c65bb3d7254d6a191748ca7093227d9fa17dfc68c5b"
+    },
+    "data/split_manifest.csv": {
+      "bytes": 306,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "87952a3727d58a8f7d82a4871ec8e05ecd208474569a799f70a7af23b7ab6e6c"
+    },
+    "figures/Figure1_workflow.pdf": {
+      "bytes": 22023,
+      "regression_class": "visual_equivalence",
+      "sha256": "aaab3d89248a2db3a3e4b0438bcf0bc65ff51a7a3712b7252d42aa9b48a297db"
+    },
+    "figures/Figure1_workflow.png": {
+      "bytes": 211607,
+      "regression_class": "visual_equivalence",
+      "sha256": "1b7c7a1d9242c55dd75e8abf63595fda8fc5f2f0db0cfb44405df64a3e3ae884"
+    },
+    "figures/Figure1_workflow.svg": {
+      "bytes": 10954,
+      "regression_class": "visual_equivalence",
+      "sha256": "7cae590ac5c3f6c730373f9f687164be2fc4165367c83df75310a2da734193f5"
+    },
+    "figures/Figure2_benchmark_boundary.pdf": {
+      "bytes": 21495,
+      "regression_class": "visual_equivalence",
+      "sha256": "cfed7070773a4c70bce20fbd3c548cfe00b56b346125e0d8c71ce1123ff2a33a"
+    },
+    "figures/Figure2_benchmark_boundary.png": {
+      "bytes": 241780,
+      "regression_class": "visual_equivalence",
+      "sha256": "0ef6fea0ed2b542576f75135c7a06228a176edb66dada80c47d8c9321867bea6"
+    },
+    "figures/Figure2_benchmark_boundary.svg": {
+      "bytes": 16259,
+      "regression_class": "visual_equivalence",
+      "sha256": "66906df8c562e6d8bcfc8c21f66b09ebd506aed205c59ea9eabf29fd190addd4"
+    },
+    "figures/Figure3_policy_comparison.pdf": {
+      "bytes": 28876,
+      "regression_class": "visual_equivalence",
+      "sha256": "d98a7a1097ce2088adff3a5e324390e99f43e942711b6a4d67b4449673efd3be"
+    },
+    "figures/Figure3_policy_comparison.png": {
+      "bytes": 189327,
+      "regression_class": "visual_equivalence",
+      "sha256": "633723f7adbb99eefadc86ff9649fd4b41f1c58287c8b01b36bbfecb2bd71842"
+    },
+    "figures/Figure3_policy_comparison.svg": {
+      "bytes": 96327,
+      "regression_class": "visual_equivalence",
+      "sha256": "65f41119638f913955e48200986ac4e6719ddf61970ef3fbd2dd666f1aa25bdb"
+    },
+    "figures/Figure4_descriptor_materials_analysis.pdf": {
+      "bytes": 28747,
+      "regression_class": "visual_equivalence",
+      "sha256": "87ddfda5b66058f5b81ccf6d32c13deb2792550b985cdd0bd03c4c2f854abe85"
+    },
+    "figures/Figure4_descriptor_materials_analysis.png": {
+      "bytes": 201790,
+      "regression_class": "visual_equivalence",
+      "sha256": "00f533855b6ba124e467668d964452c10b394760ea72309c8fed086ea78c198f"
+    },
+    "figures/Figure4_descriptor_materials_analysis.svg": {
+      "bytes": 66730,
+      "regression_class": "visual_equivalence",
+      "sha256": "4ba89c72b682f56c89ec921f0257d314e4899ec5c0eca3a0f113b8298ada4e36"
+    },
+    "figures/Figure5_trace_replay_audit.pdf": {
+      "bytes": 19537,
+      "regression_class": "visual_equivalence",
+      "sha256": "45ff8384c80d5fc41933a2f814ef372cbb5107da7f39000b37d563b4bca99beb"
+    },
+    "figures/Figure5_trace_replay_audit.png": {
+      "bytes": 212204,
+      "regression_class": "visual_equivalence",
+      "sha256": "9e163f81f0440c83b9513f4ec1fd104c7970cfbfe9ddd73ea5008df6fb2c7d6d"
+    },
+    "figures/Figure5_trace_replay_audit.svg": {
+      "bytes": 10392,
+      "regression_class": "visual_equivalence",
+      "sha256": "6b5cee15541b71186898e4e61863f86008d871d055e30ae60d13568aab68b116"
+    },
+    "figures/Supplementary_Figure1_secondary_thermal_repository_context.pdf": {
+      "bytes": 21477,
+      "regression_class": "visual_equivalence",
+      "sha256": "39a6097da12ad013df0e88b26765ebc78fafd6cdcc7caa4a31acafea6e6351ea"
+    },
+    "figures/Supplementary_Figure1_secondary_thermal_repository_context.png": {
+      "bytes": 115694,
+      "regression_class": "visual_equivalence",
+      "sha256": "b051507f3a38f7ba46610b95e3ded414670be7830e30362f855e8feeef249595"
+    },
+    "figures/Supplementary_Figure1_secondary_thermal_repository_context.svg": {
+      "bytes": 12470,
+      "regression_class": "visual_equivalence",
+      "sha256": "319c977b730f94cc863f4f99c09788ed2980e7eacaf94e29acc8bc6cf76ccd8e"
+    },
+    "figures/Supplementary_Figure2_descriptor_contrasts.pdf": {
+      "bytes": 11635,
+      "regression_class": "visual_equivalence",
+      "sha256": "dfa6ec9e3b90893284406c92b242066884a1591676297916b19c5c5e0ffa63e1"
+    },
+    "figures/Supplementary_Figure2_descriptor_contrasts.png": {
+      "bytes": 88562,
+      "regression_class": "visual_equivalence",
+      "sha256": "9d0c5e8b08feabb1fc49cb5a1625ccea22ca8e5b681e348f9b724d5b92fe37bd"
+    },
+    "figures/Supplementary_Figure2_descriptor_contrasts.svg": {
+      "bytes": 14869,
+      "regression_class": "visual_equivalence",
+      "sha256": "8be5a3b6bf3e329297e92e59ba990cf4a20871c4a0edf450749122988b2a9094"
+    },
+    "models/activation_logistic_train_split.json": {
+      "bytes": 18907,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "219c3fa01be1530ea20057ab9a91839567974eb68ee6680aca7447860994ea30"
+    },
+    "models/thermal_ridge_train_split.json": {
+      "bytes": 18730,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "08a72e1b5537a89568f6568de9377a826ebcc48f2aa330a8260382454b00c8ee"
+    },
+    "results/reproduction/activation_dummy_baselines.json": {
+      "bytes": 1102,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "d788f45f785fba0edfb965fdc145fdc878a6dc956abbadee83b91f821814a020"
+    },
+    "results/reproduction/activation_model_metrics.json": {
+      "bytes": 1730,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "362111d10bc7fbfe4efa9752d2fe91aa114c2c31cf3f035cbb02ab41427fe4dc"
+    },
+    "results/reproduction/activation_test_source_group_bootstrap_raw.csv": {
+      "bytes": 1033586,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "ce7a6de5ca9575d2714ba75c006282b00a652526a104016243de1aac645c5cf1"
+    },
+    "results/reproduction/activation_test_source_group_bootstrap_summary.json": {
+      "bytes": 1276,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "19ecdd640aa96a3404df3b47fef35497bdd522a1b355cfc04a85bf7417deb338"
+    },
+    "results/reproduction/descriptor_pca_variance.json": {
+      "bytes": 77,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "8037913a6aea1cf94762874620d08b8d56132483609366126aafda8cc2639af4"
+    },
+    "results/reproduction/diagnostics/source_overlap_C_ablation.csv": {
+      "bytes": 750,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "ff95cb87c2e5be271998693471d42cba1ae8305f781c51a48c84558739254419"
+    },
+    "results/reproduction/diagnostics/source_overlap_C_ablation_summary.json": {
+      "bytes": 1695,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "36aff8782dade6dcd2d7d33c2ddbe640f2c08573f39d0ee98a60590264dd0b76"
+    },
+    "results/reproduction/diagnostics/test_policy_risk_stress_legacy_0p35.csv": {
+      "bytes": 7699,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "59058a7b4bacf72e30b99bfb2060c9ab8f16e1c385041fe4e415b4da5c9379f8"
+    },
+    "results/reproduction/full_reproduction_summary.json": {
+      "bytes": 58341,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "59b36c7b9b003fefceead369de8027c68e72446705f270d4458397a0069274f6"
+    },
+    "results/reproduction/leakage_audit.json": {
+      "bytes": 3535,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "a20a5dd860535652e2a5614f069b9708eb2c3b643c6e11f4cdb069660a768793"
+    },
+    "results/reproduction/random_baseline_full_test_distribution.csv": {
+      "bytes": 198463,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "ccfa05d0171fd8594b48abee85e0a02e28198eb084e19c26453a5e0b87dd2467"
+    },
+    "results/reproduction/random_baseline_full_test_summary.csv": {
+      "bytes": 493,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "b6332322c92481fb86a0342bdc0ef7c96a69c0f9d6e77714d53d5433e1cf9a20"
+    },
+    "results/reproduction/random_baseline_primary_cost_only_raw.csv": {
+      "bytes": 198463,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "ccfa05d0171fd8594b48abee85e0a02e28198eb084e19c26453a5e0b87dd2467"
+    },
+    "results/reproduction/random_baseline_primary_cost_only_summary.csv": {
+      "bytes": 493,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "b6332322c92481fb86a0342bdc0ef7c96a69c0f9d6e77714d53d5433e1cf9a20"
+    },
+    "results/reproduction/replay_summary.json": {
+      "bytes": 178,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "ab4a78bc96916f31a191b9f95d371c673b6482d5a60d4799c620589544f06abb"
+    },
+    "results/reproduction/risk_feasibility_audit.csv": {
+      "bytes": 2594,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "6972fbb416db6f1ba36d24a4e4c7edcd0c275a24a177913f41dc89c74e4f0490"
+    },
+    "results/reproduction/source_group_audit.json": {
+      "bytes": 964,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "6980c4fc71b0a625dbccd7c53ee762266dfab68b9aa9c9725aea8e7d272481d8"
+    },
+    "results/reproduction/test_batch_size_sensitivity.csv": {
+      "bytes": 10341,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "a2735bcc1d72c1a2b423eb017812a75b2700d5560b0f91abf676318a60b5767f"
+    },
+    "results/reproduction/test_policy_comparison_common_risk.csv": {
+      "bytes": 2035,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "ca78c229b9b1a4058525a55342891c91c60f2fbf8f932c0e7c8f8b6983830a09"
+    },
+    "results/reproduction/test_policy_comparison_primary_cost_only.csv": {
+      "bytes": 2303,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "5a8692c74313ba86e8fff26321c8bce2e37e85659a64473391d781e12728f61b"
+    },
+    "results/reproduction/test_policy_comparison_unconstrained.csv": {
+      "bytes": 2303,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "5a8692c74313ba86e8fff26321c8bce2e37e85659a64473391d781e12728f61b"
+    },
+    "results/reproduction/test_pool_resampling_primary_cost_only_raw.csv": {
+      "bytes": 569924,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "39181f4f1452bef3afb210fbbb6c495a05de5a709905590a473cb9f23c23513e"
+    },
+    "results/reproduction/test_pool_resampling_primary_cost_only_summary.csv": {
+      "bytes": 2517,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "4ed10ce1d62bca39ac821b9082c1801ee2f37e08d7bc97c0d44701f2216d1cfc"
+    },
+    "results/reproduction/test_pool_resampling_raw.csv": {
+      "bytes": 569924,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "39181f4f1452bef3afb210fbbb6c495a05de5a709905590a473cb9f23c23513e"
+    },
+    "results/reproduction/test_pool_resampling_summary.csv": {
+      "bytes": 2517,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "4ed10ce1d62bca39ac821b9082c1801ee2f37e08d7bc97c0d44701f2216d1cfc"
+    },
+    "results/reproduction/thermal_regression_metrics.json": {
+      "bytes": 264,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "ff600cfe7d7a2cd31c9d1c349bbfb2e81fdde61b409e6906049d36401055fddb"
+    },
+    "results/reproduction/train_held_source_overlap_exclusions.csv": {
+      "bytes": 63011,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "c2530c61d77f59c673782c8d9a72c205382b3c78bfbc98c455e06819fe6602eb"
+    },
+    "results/reproduction/training_source_doi_backfill_audit.json": {
+      "bytes": 1579,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "79f311941e7dc8e3fc6150cdcfffbcf45ece4e935b9bbc184b3c28fad1aeb740"
+    },
+    "results/reproduction/tuning/activation_C_train_internal_SOURCE_GROUP_CV.csv": {
+      "bytes": 3080,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "0c3c104824076fe0bb6748b1439ef98d047e01026406df6a2ef9d19cfd669a01"
+    },
+    "results/reproduction/tuning/activation_train_group_cv_fold_audit.csv": {
+      "bytes": 460,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "bf05dcf216b9248c4a219017c7a062380bf7f3684349935f289a713dad3a2b56"
+    },
+    "results/reproduction/tuning/locked_parameters.json": {
+      "bytes": 8304,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "b58f9b37029245ab92fbd3b51a0b039322a22f35d717718c0297a01c30e31afd"
+    },
+    "results/reproduction/tuning/portfolio_policy_calibration_selection.csv": {
+      "bytes": 5053,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "e8bca64800cab29f1b90e2f80550d48ba9898fa3c179cdfc2c4292d6d2774c4b"
+    },
+    "results/reproduction/tuning/portfolio_policy_cost_only_calibration_selection.csv": {
+      "bytes": 5053,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "e8bca64800cab29f1b90e2f80550d48ba9898fa3c179cdfc2c4292d6d2774c4b"
+    },
+    "results/reproduction/tuning/portfolio_policy_cost_only_group_bootstrap_stability.csv": {
+      "bytes": 2374,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "87de5a033e42d622e5b804f5cb491c383a461ba9f3ce11861912e926758e9597"
+    },
+    "results/reproduction/tuning/portfolio_policy_group_bootstrap_stability.csv": {
+      "bytes": 2374,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "87de5a033e42d622e5b804f5cb491c383a461ba9f3ce11861912e926758e9597"
+    },
+    "results/reproduction/tuning/thermal_alpha_train_cv_selection.csv": {
+      "bytes": 248,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "09000c5a8fef48cbf122f4708534938f5d3c80bf0956ffdca0a2cbcabd5f85b1"
+    },
+    "results/reproduction/tuning/v45A3_locked_parameters_before_test.json": {
+      "bytes": 6636,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "970bc3844595d7d2a88869b3fd924ecfeaf0d6b4cb18c7b9b25d6aaa4f02247e"
+    },
+    "results/reproduction/tuning/v49_locked_parameters_before_test.json": {
+      "bytes": 8093,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "7fe2e2a13ea232a0952ff6d2128ebd5ad5d1c5c69ff323e757b3730a7bf7b2ee"
+    },
+    "results/reproduction/v49_statistical_summary.json": {
+      "bytes": 32131,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "3092863cd5cdc4291e79cf08f0193e7e051131fcad1065696041340cc5b8c7d9"
+    },
+    "source_data/activation_dummy_baselines_source.csv": {
+      "bytes": 447,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "d7f77f430b43430ce7389848806c92c8e7b7c19e67d2467e21f7d2cdaab910de"
+    },
+    "source_data/activation_test_source_group_bootstrap_source.csv": {
+      "bytes": 826,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "4dd4609c546c06a2ea7be9498b040a04801d81afb84fffd4ca1cb3fdc885620b"
+    },
+    "source_data/figure3_pool_resampling_primary_cost_raw_points.csv": {
+      "bytes": 110747,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "47747ed9e268c00f2145aa39d7e9267dc0cd7ab58dbfc1e8f3332e94288a28f4"
+    },
+    "source_data/figure3_pool_resampling_primary_cost_summary_source.csv": {
+      "bytes": 2517,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "4ed10ce1d62bca39ac821b9082c1801ee2f37e08d7bc97c0d44701f2216d1cfc"
+    },
+    "source_data/figure3_pool_resampling_raw_points.csv": {
+      "bytes": 76616,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "339dc0c3cd0bb295e45f32565e26bb3351c4c33598e2e340c78f114e00b69f08"
+    },
+    "source_data/figure3_pool_resampling_summary_source.csv": {
+      "bytes": 2275,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "bcb7943d0ade2cd78359120c957145762f6a993418a1056ad5301f4070914f84"
+    },
+    "source_data/figure3_random_baseline_primary_cost_raw_points.csv": {
+      "bytes": 198463,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "ccfa05d0171fd8594b48abee85e0a02e28198eb084e19c26453a5e0b87dd2467"
+    },
+    "source_data/figure3_random_baseline_primary_cost_summary_source.csv": {
+      "bytes": 493,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "b6332322c92481fb86a0342bdc0ef7c96a69c0f9d6e77714d53d5433e1cf9a20"
+    },
+    "source_data/figure3_random_baseline_raw_points.csv": {
+      "bytes": 120272,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "465f530b4f80958b0c86e947071a721311e32be9d5d0828fc700180e73afdc1b"
+    },
+    "source_data/figure3_random_baseline_summary_source.csv": {
+      "bytes": 416,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "856c72c3342512c7697f79c8ad0d3bddbcdd0623bc0372d94270f064ef4f7e62"
+    },
+    "source_data/figure3_test_policy_common_risk_source.csv": {
+      "bytes": 1637,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "c1471be1bb2b371dfb564e1aca65a16cd61ae254516453dc0e9a7c55dd8b4e09"
+    },
+    "source_data/figure3_test_policy_primary_cost_source.csv": {
+      "bytes": 2303,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "5a8692c74313ba86e8fff26321c8bce2e37e85659a64473391d781e12728f61b"
+    },
+    "source_data/figure4_descriptor_contrasts.csv": {
+      "bytes": 419,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "a64e166a5a7c0145540f15e6ec4ded729eccd17f46c8c84859c4758f7246f48f"
+    },
+    "source_data/figure4_pca_coordinates.csv": {
+      "bytes": 15329,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "015f9683c771a4cd050e45f2de82e03dfd8a364aaa7a6da28107e6a57ffa9aee"
+    },
+    "source_data/figure4_trace_score_cost.csv": {
+      "bytes": 2905,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "9f6c37a4a16a304620ad7e93575188acbd72f19e3f1520e35f12052cb65f9344"
+    },
+    "source_data/figure5_trace_replay_source.csv": {
+      "bytes": 417,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "9dceda148eb800a79f05af57b7c7a82f70415ef2bcd16f4c8768a6468fbc601d"
+    },
+    "source_data/figure_source_data_manifest.csv": {
+      "bytes": 5395,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "1bdc9ca366e1a55e3c68da2fb2d5d17340275e246014c13192da32cbd44c81e2"
+    },
+    "source_data/risk_feasibility_audit_source.csv": {
+      "bytes": 2594,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "6972fbb416db6f1ba36d24a4e4c7edcd0c275a24a177913f41dc89c74e4f0490"
+    },
+    "source_data/source_overlap_C_ablation_source.csv": {
+      "bytes": 750,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "ff95cb87c2e5be271998693471d42cba1ae8305f781c51a48c84558739254419"
+    },
+    "source_data/supplementary_figure1_source_data.csv": {
+      "bytes": 178,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "3c25cbdccba9e67cd8154955c6b54f19462a1674e7e1f78d15eab6dcdeaeb5be"
+    },
+    "source_data/table1_benchmark_contract.csv": {
+      "bytes": 1488,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "2936883468941c7cdeaf39745eb6b328b29b6d7a960c16d9543165de3624adb9"
+    },
+    "traces/action_traces/cost_aware_test_primary_cost_contract_trace.json": {
+      "bytes": 71561,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "1ebcdcc5b9b14ee1c5cfd2b695a5ebf4ed5a4a7ab905558c34d8a98702a81b8c"
+    },
+    "traces/action_traces/portfolio_batch_test_primary_cost_contract_trace.json": {
+      "bytes": 73213,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "685ea0e3ae1372902cc620f150c0312329b53d63b111d275a25677ae47dc1d8d"
+    },
+    "traces/action_traces/random_baseline_test_primary_cost_contract_trace.json": {
+      "bytes": 70420,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "5aba74b5e82cab0526ee42f47434b2bc0fd7fd0f32ecfd635ee9dc0a6d542ea7"
+    },
+    "traces/action_traces/top_score_test_primary_cost_contract_trace.json": {
+      "bytes": 71488,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "6e09c8c512e2550a1458ebb3c7f28af9913a6ce7d7fb3056f5f1ec58b3067f33"
+    },
+    "traces/action_traces/uncertainty_test_primary_cost_contract_trace.json": {
+      "bytes": 71624,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "2d61a6ed305a9ea05767a9f9e729dd1f0d652a0c334932d10e2a2293558be138"
+    },
+    "traces/replay_checks/cost_aware_test_primary_cost_contract_trace_replay.json": {
+      "bytes": 1500,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "2fac10da494071ed5deae9bbc3d0218147f499b526690924b72767ef58fadbdc"
+    },
+    "traces/replay_checks/portfolio_batch_test_primary_cost_contract_trace_replay.json": {
+      "bytes": 1505,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "7b530795885af1dfc840d0828d7e30e4da9928151361266fc28606ee77f82496"
+    },
+    "traces/replay_checks/random_baseline_test_primary_cost_contract_trace_replay.json": {
+      "bytes": 1504,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "525430be372666edefe7aa52b7b1590a9d4a7c7cead9d585033ae4cdc93637ed"
+    },
+    "traces/replay_checks/top_score_test_primary_cost_contract_trace_replay.json": {
+      "bytes": 1500,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "f93ab136fb3d54ac8d75389b8d96f41966797d9f7a9e9519999c0e9d6936acd6"
+    },
+    "traces/replay_checks/uncertainty_test_primary_cost_contract_trace_replay.json": {
+      "bytes": 1500,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "a2b86f7e0ad6d2cc1b9660ed19fc6f61c1fb57decd98683f486f5f61f98c6be0"
+    },
+    "traces/trace_archive_manifest.csv": {
+      "bytes": 1109,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "94982765b98b7a4961076e8feaf80a6dc5b48898c34f843f846ef07db819eaad"
+    }
+  },
+  "schema_version": "3.0"
+}

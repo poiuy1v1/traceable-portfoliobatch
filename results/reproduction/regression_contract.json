@@ -1,0 +1,135 @@
+{
+  "schema_version": "4.0",
+  "v49_exact_discrete_requirements": {
+    "active_training_doi_coverage": 1.0,
+    "active_calibration_doi_coverage": 1.0,
+    "active_test_doi_coverage": 1.0,
+    "train_calibration_source_doi_overlap_count": 0,
+    "train_test_source_doi_overlap_count": 0,
+    "calibration_test_source_doi_overlap_count": 0,
+    "excluded_train_source_overlap_row_count": "locked_by_canonical_reference",
+    "activation_cv_splitter": "StratifiedGroupKFold",
+    "activation_cv_random_state": 45,
+    "activation_cv_n_splits": 5,
+    "activation_cv_fold_group_overlap_count": 0,
+    "primary_policy_contract": "cost_only",
+    "primary_risk_budget": null,
+    "legacy_risk_stress_budget_per_item": 0.35,
+    "legacy_risk_role": "stress_test_only",
+    "dummy_baseline_fit_split": "train",
+    "dummy_baseline_strategies": [
+      "prior",
+      "most_frequent"
+    ],
+    "bootstrap_group_unit": "normalized_source_doi",
+    "bootstrap_requested_resamples": 10000,
+    "bootstrap_seed": 45,
+    "source_overlap_diagnostic_C_values": [
+      0.001,
+      3.0
+    ],
+    "source_overlap_diagnostic_universes": [
+      "historical_overlap_inclusive_test",
+      "final_publication_source_disjoint_test"
+    ],
+    "source_overlap_diagnostic_does_not_affect_pretest_lock": true,
+    "risk_feasibility_pools": [
+      "final_calibration",
+      "final_test"
+    ],
+    "risk_feasibility_requested_batch_sizes": [
+      5,
+      10,
+      20
+    ],
+    "primary_selector_candidate_ids": "locked_by_canonical_reference",
+    "primary_selector_full_batch_status": "full_batch_required_for_all_five_methods",
+    "primary_selector_selection_and_stop_event_counts": "locked_by_canonical_reference",
+    "primary_trace_contract": "cost_only",
+    "primary_trace_risk_budget": null,
+    "trace_config_matches_pretest_lock": true,
+    "trace_full_stepwise_replay": true,
+    "convergence_warning_count": 0
+  },
+  "canonical_platform": {
+    "name": "paper13-canonical-linux-container",
+    "container_image": "python:3.13.5-slim-bookworm@sha256:4c2cf9917bd1cbacc5e9b07320025bdb7cdf2df7b0ceaccb55e9dd7e30987419",
+    "architecture": "linux/amd64",
+    "python": "3.13.5",
+    "dependency_lock": "requirements-canonical.txt",
+    "cpu_dispatch_contract": {
+      "schema_version": "1.0",
+      "architecture": "x86-64",
+      "effective_common_dispatch_target": "Haswell-class AVX2/FMA3 without AVX512 dispatch",
+      "openblas_coretype": "Haswell",
+      "openblas_runtime_architecture_required": "Haswell",
+      "numpy_avx512_policy": "disable every AVX512-family target recognized in numpy._core._multiarray_umath.__cpu_dispatch__",
+      "numpy_disable_feature_discovery": "scripts/determine_numpy_avx512_features.py",
+      "runtime_gate": "scripts/check_canonical_cpu_dispatch.py",
+      "runtime_gate_must_precede_scientific_execution": true,
+      "thread_count": 1
+    },
+    "threading_environment": {
+      "OPENBLAS_CORETYPE": "Haswell",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "PYTHONHASHSEED": "0",
+      "SOURCE_DATE_EPOCH": "1785369600"
+    },
+    "purpose": "canonical scientific reference generation; other platforms are portability checks"
+  },
+  "comparison_classes": {
+    "exact_discrete": {
+      "description": "candidate identities, split sizes, selected hyperparameters, counts, schemas and event types must match exactly on every platform"
+    },
+    "numerical_tolerance": {
+      "canonical": {
+        "default_abs": 1e-12,
+        "default_rel": 1e-12,
+        "overrides": [
+          {"pattern": "numeric.activation.artifact_regeneration_max_abs_diff", "abs": 1e-12, "rel": 0.0}
+        ]
+      },
+      "portability": {
+        "default_abs": 0.0005,
+        "default_rel": 1e-6,
+        "overrides": [
+          {"pattern": "numeric.activation.test_accuracy_at_0_5", "abs": 1e-12, "rel": 0.0},
+          {"pattern": "numeric.activation.test_majority_class_fraction_descriptive", "abs": 1e-12, "rel": 0.0},
+          {"pattern": "numeric.activation.artifact_regeneration_max_abs_diff", "abs": 1e-12, "rel": 0.0},
+          {"pattern": "numeric.locked_policy.*", "abs": 1e-10, "rel": 1e-10},
+          {"pattern": "numeric.traces.*.hit_fraction", "abs": 1e-12, "rel": 0.0},
+          {"pattern": "numeric.random_summary*", "abs": 0.02, "rel": 1e-6},
+          {"pattern": "numeric.pool_summary*", "abs": 0.02, "rel": 1e-6},
+          {"pattern": "numeric.thermal.*", "abs": 1e-8, "rel": 1e-10},
+          {"pattern": "numeric.pca.*", "abs": 0.0005, "rel": 1e-6}
+        ]
+      }
+    },
+    "canonical_byte_identity": {
+      "description": "CSV and JSON scientific artifacts must be byte-identical only in the canonical Linux container",
+      "enforced_by": "scripts/check_clean_reproduction.py --mode canonical"
+    },
+    "visual_equivalence": {
+      "description": "figure dimensions and bounded rendered-pixel differences are checked across platforms; PDF/SVG hashes are diagnostic only",
+      "max_mean_absolute_channel_difference": 2.0,
+      "max_changed_pixel_fraction": 0.1
+    },
+    "diagnostics_only": {
+      "fields": [
+        "diagnostics.final_fit_n_iter",
+        "diagnostics.maximum_cv_n_iter",
+        "diagnostics.max_iter",
+        "diagnostics.tol"
+      ],
+      "description": "recorded for optimizer diagnosis but excluded from cross-platform scientific equivalence"
+    }
+  },
+  "manifest_self_coverage": {
+    "rule": "a manifest does not include its own digest or the digest of an archive that contains it",
+    "coverage": "self-excluded manifests and final archives are covered by the enclosing package-level SHA256 manifest",
+    "reason": "literal self-hashing is recursive and has no stable fixed point"
+  }
+}

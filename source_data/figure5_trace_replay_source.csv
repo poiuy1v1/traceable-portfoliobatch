@@ -1,0 +1,13 @@
+check,value
+trace_count,5
+trace_replay_passed,5
+activation_score_artifact_max_abs_diff,0.0
+activation_score_artifact_portability_tolerance,1e-12
+candidate_id_split_overlap,0
+raw_refcode_split_overlap,0
+raw_source_row_split_overlap,0
+policy_calibration_test_DOI_overlap,0
+training_source_DOI,complete (100%)
+train_calibration_source_DOI_overlap,0
+train_test_source_DOI_overlap,0
+excluded_train_source_overlap_rows,434

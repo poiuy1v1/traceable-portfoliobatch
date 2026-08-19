@@ -1,0 +1,46 @@
+{
+  "checks": {
+    "alternative_candidate_records_match": true,
+    "alternative_prefix_match": true,
+    "config_matches_locked_parameters": true,
+    "environment_lock_hash_match": true,
+    "event_counts_match": true,
+    "feature_table_hash_match": true,
+    "full_stepwise_decisions_match": true,
+    "locked_parameters_hash_match": true,
+    "locked_parameters_payload_match": true,
+    "manifest_hash_match": true,
+    "metrics_match": true,
+    "model_hash_match": true,
+    "selected_candidate_records_match": true,
+    "selected_ids_match": true,
+    "selector_code_hash_match": true,
+    "source_manifest_hash_match": true,
+    "stepwise_selected_ids_match": true
+  },
+  "full_record_differences": {
+    "config_lock": [],
+    "logged_alternative_candidates": [],
+    "selected_candidates": [],
+    "stepwise_decisions": []
+  },
+  "maximum_full_record_numeric_difference": 4.440892098500626e-16,
+  "metric_differences": {
+    "hit_fraction": 0.0,
+    "hits": 0.0,
+    "mean_predicted_success": 0.0,
+    "proxy_cost_normalized_yield": 0.0,
+    "risk_used": 0.0,
+    "selected_count": 0.0,
+    "total_proxy_cost": 0.0
+  },
+  "passed": true,
+  "replayed_selected_candidates": [
+    "mofsimplify_solvent_test_00206_LUYSEF",
+    "mofsimplify_solvent_test_00186_KIYMIP",
+    "mofsimplify_solvent_val_00343_ZAHLEC",
+    "mofsimplify_solvent_test_00306_RAHMAP",
+    "mofsimplify_solvent_val_00072_EXAXAE"
+  ],
+  "trace": "traces/action_traces/uncertainty_test_primary_cost_contract_trace.json"
+}

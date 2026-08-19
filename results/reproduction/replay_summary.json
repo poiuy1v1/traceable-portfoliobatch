@@ -1,0 +1,7 @@
+{
+  "failed": [],
+  "passed_count": 5,
+  "semantics": "exact archived-implementation replay, not independent implementation validation",
+  "status": "PASS",
+  "trace_count": 5
+}

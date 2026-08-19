@@ -1,0 +1,10 @@
+field,implementation,boundary
+Primary endpoint,MOFSimplify activation / solvent-removal label,not water or hydrolytic stability
+Model selection,C=0.001; five-fold StratifiedGroupKFold by training source DOI with one-standard-error rule,training only; fixed random_state=45; zero fold DOI overlap
+Source grouping,publication DOI groups with the preserved v45A2R2 calibration/test assignment after conservative train-source-overlap exclusion,"publication-source grouping; not chemical-family, topology, structural-similarity, or chemical-OOD grouping"
+Policy selection,calibration-only 27-configuration cost-constrained tuning; risk_budget=None,test labels are not used for model or policy selection
+Primary selector constraint,locked proxy-cost budget only; full requested batch,risk is not a primary hard feasibility gate
+Risk,0.5 * (1 - predicted_success) + 0.5 * normalized_binary_entropy,benchmark-defined uncalibrated proxy; descriptive in the primary comparison and constrained only in the legacy 0.35 stress test
+Test use,final locked publication-source-disjoint evaluation,"not used for model selection, policy tuning, or risk-threshold tuning"
+Statistics,"10,000 final-test source-DOI-group bootstrap resamples; 100 random full-pool runs; 20 DOI-group pool resamples; 10 random seeds per resampled pool",percentile uncertainty and descriptive robustness; no hypothesis test
+Trace layer,stepwise JSON records and exact archived-implementation replay,not independent implementation

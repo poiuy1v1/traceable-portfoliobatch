@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="626.759446pt" height="268.092pt" viewBox="0 0 626.759446 268.092" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Figure5_trace_replay_audit</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Figure5_trace_replay_audit</dc:title>
+    <dc:date>2026-08-09</dc:date>
+    <dc:description>Deterministic figure artifact</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Traceable PortfolioBatch</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 268.092
+L 626.759446 268.092
+L 626.759446 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.745033 65.925
+L 271.923618 65.925
+L 271.923618 37.737
+L 37.745033 37.737
+z
+" clip-path="url(#pf58b6082fb)" style="fill: #eef2f6; stroke: #8a96a6; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 37.745033 108.207
+L 271.923618 108.207
+L 271.923618 80.019
+L 37.745033 80.019
+z
+" clip-path="url(#pf58b6082fb)" style="fill: #eef2f6; stroke: #8a96a6; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 37.745033 150.489
+L 271.923618 150.489
+L 271.923618 122.301
+L 37.745033 122.301
+z
+" clip-path="url(#pf58b6082fb)" style="fill: #eef2f6; stroke: #8a96a6; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 37.745033 192.771
+L 271.923618 192.771
+L 271.923618 164.583
+L 37.745033 164.583
+z
+" clip-path="url(#pf58b6082fb)" style="fill: #eef2f6; stroke: #8a96a6; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 37.745033 235.053
+L 271.923618 235.053
+L 271.923618 206.865
+L 37.745033 206.865
+z
+" clip-path="url(#pf58b6082fb)" style="fill: #eef2f6; stroke: #8a96a6; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: middle" x="154.834326" y="54.231656" transform="rotate(-0 154.834326 54.231656)">input, model, code and environment hashes</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 154.834326 67.924173
+Q 154.834326 72.972051 154.834326 77.013698
+" style="fill: none; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 156.734326 73.213698
+L 154.834326 77.013698
+L 152.934326 73.213698
+z
+" style="fill: #1f77b4; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: middle" x="154.834326" y="96.513656" transform="rotate(-0 154.834326 96.513656)">locked primary cost-only configuration</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 154.834326 110.206173
+Q 154.834326 115.254051 154.834326 119.295698
+" style="fill: none; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 156.734326 115.495698
+L 154.834326 119.295698
+L 152.934326 115.495698
+z
+" style="fill: #1f77b4; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: middle" x="154.834326" y="138.795656" transform="rotate(-0 154.834326 138.795656)">cost-feasibility counts; risk retained descriptively</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 154.834326 152.488173
+Q 154.834326 157.536051 154.834326 161.577698
+" style="fill: none; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 156.734326 157.777698
+L 154.834326 161.577698
+L 152.934326 157.777698
+z
+" style="fill: #1f77b4; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: middle" x="154.834326" y="181.077656" transform="rotate(-0 154.834326 181.077656)">priority components and selected candidate</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 154.834326 194.770173
+Q 154.834326 199.818051 154.834326 203.859698
+" style="fill: none; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 156.734326 200.059698
+L 154.834326 203.859698
+L 152.934326 200.059698
+z
+" style="fill: #1f77b4; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: middle" x="154.834326" y="223.359656" transform="rotate(-0 154.834326 223.359656)">top feasible alternatives and replay specification</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle" x="154.834326" y="256.194" transform="rotate(-0 154.834326 256.194)">5 candidate selections + 0 stop event</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="7.2" y="15.178359" transform="rotate(-0 7.2 15.178359)">a)</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10.4px; font-family: 'DejaVu Sans'; text-anchor: middle" x="154.834326" y="18.992" transform="rotate(-0 154.834326 18.992)">Stepwise decision record</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="line2d_1">
+    <path d="M 362.673354 64.7505
+L 575.160539 64.7505
+" clip-path="url(#p9bfdc0e783)" style="fill: none; stroke: #d9dee5; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 362.673354 97.6365
+L 575.160539 97.6365
+" clip-path="url(#p9bfdc0e783)" style="fill: none; stroke: #d9dee5; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 362.673354 130.5225
+L 575.160539 130.5225
+" clip-path="url(#p9bfdc0e783)" style="fill: none; stroke: #d9dee5; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 362.673354 163.4085
+L 575.160539 163.4085
+" clip-path="url(#p9bfdc0e783)" style="fill: none; stroke: #d9dee5; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 362.673354 196.2945
+L 575.160539 196.2945
+" clip-path="url(#p9bfdc0e783)" style="fill: none; stroke: #d9dee5; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 362.673354 229.1805
+L 575.160539 229.1805
+" clip-path="url(#p9bfdc0e783)" style="fill: none; stroke: #d9dee5; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="362.673354" y="54.18" transform="rotate(-0 362.673354 54.18)">archived traces replayed</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end" x="575.160539" y="54.18" transform="rotate(-0 575.160539 54.18)">5 / 5</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="362.673354" y="87.066" transform="rotate(-0 362.673354 87.066)">score-artifact reload</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end" x="575.160539" y="87.066" transform="rotate(-0 575.160539 87.066)">&lt; 1e-12 contract</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="362.673354" y="119.952" transform="rotate(-0 362.673354 119.952)">train-calibration DOI overlap</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end" x="575.160539" y="119.952" transform="rotate(-0 575.160539 119.952)">0</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="362.673354" y="152.838" transform="rotate(-0 362.673354 152.838)">train-test DOI overlap</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end" x="575.160539" y="152.838" transform="rotate(-0 575.160539 152.838)">0</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="362.673354" y="185.724" transform="rotate(-0 362.673354 185.724)">calibration-test DOI overlap</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end" x="575.160539" y="185.724" transform="rotate(-0 575.160539 185.724)">0</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="362.673354" y="218.61" transform="rotate(-0 362.673354 218.61)">excluded overlap rows</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end" x="575.160539" y="218.61" transform="rotate(-0 575.160539 218.61)">434</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="468.916946" y="251.496" transform="rotate(-0 468.916946 251.496)">Archived-implementation consistency; not independent software validation</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="336.112455" y="15.178359" transform="rotate(-0 336.112455 15.178359)">b)</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 10.4px; font-family: 'DejaVu Sans'; text-anchor: middle" x="468.916946" y="18.992" transform="rotate(-0 468.916946 18.992)">Exact replay and integrity audit</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf58b6082fb">
+   <rect x="27.563355" y="25.992" width="254.541941" height="234.9"/>
+  </clipPath>
+  <clipPath id="p9bfdc0e783">
+   <rect x="358.246537" y="25.992" width="221.340818" height="234.9"/>
+  </clipPath>
+ </defs>
+</svg>

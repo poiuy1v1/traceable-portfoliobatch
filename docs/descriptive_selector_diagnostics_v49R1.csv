@@ -1,0 +1,17 @@
+summary_type,batch_size,method,method_benchmark_positive_labels,method_proxy_cost_normalized_yield,random_reference_mean_labels,random_reference_sd_labels,random_reference_mean_proxy_yield,random_reference_sd_proxy_yield,empirical_fraction_random_labels_ge_method,empirical_fraction_random_proxy_yield_ge_method,pool_mean_labels,paired_mean_label_difference_vs_pool_random_mean,pools_method_gt_random_mean_labels,pools_method_eq_random_mean_labels,pools_method_lt_random_mean_labels,pool_mean_proxy_yield,paired_mean_proxy_yield_difference_vs_pool_random_mean,pools_method_gt_random_mean_proxy_yield,pools_method_eq_random_mean_proxy_yield,pools_method_lt_random_mean_proxy_yield,interpretation
+full_pool_random_empirical_tail,5,top_score,4,0.394390,3.000000,1.128152,0.362525,0.144090,0.340000,0.330000,,,,,,,,,,,descriptive_frequency_not_p_value_not_tuning
+full_pool_random_empirical_tail,5,uncertainty,4,0.535457,3.000000,1.128152,0.362525,0.144090,0.340000,0.120000,,,,,,,,,,,descriptive_frequency_not_p_value_not_tuning
+full_pool_random_empirical_tail,5,cost_aware,4,0.571126,3.000000,1.128152,0.362525,0.144090,0.340000,0.080000,,,,,,,,,,,descriptive_frequency_not_p_value_not_tuning
+full_pool_random_empirical_tail,5,portfolio_batch,3,0.323540,3.000000,1.128152,0.362525,0.144090,0.690000,0.630000,,,,,,,,,,,descriptive_frequency_not_p_value_not_tuning
+paired_doi_group_pool_resampling,5,top_score,,,,,,,,,3.250000,0.280000,12,2,6,0.325151,-0.031565,8,0,12,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning
+paired_doi_group_pool_resampling,5,uncertainty,,,,,,,,,4.100000,1.130000,18,0,2,0.555579,0.198863,20,0,0,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning
+paired_doi_group_pool_resampling,5,cost_aware,,,,,,,,,3.100000,0.130000,9,2,9,0.447938,0.091222,15,0,5,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning
+paired_doi_group_pool_resampling,5,portfolio_batch,,,,,,,,,3.050000,0.080000,8,1,11,0.358801,0.002085,9,0,11,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning
+paired_doi_group_pool_resampling,10,top_score,,,,,,,,,5.500000,-0.635000,5,1,14,0.278504,-0.090981,1,0,19,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning
+paired_doi_group_pool_resampling,10,uncertainty,,,,,,,,,8.550000,2.415000,20,0,0,0.571932,0.202448,20,0,0,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning
+paired_doi_group_pool_resampling,10,cost_aware,,,,,,,,,6.050000,-0.085000,9,0,11,0.435876,0.066391,14,0,6,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning
+paired_doi_group_pool_resampling,10,portfolio_batch,,,,,,,,,5.750000,-0.385000,9,0,11,0.353332,-0.016153,8,0,12,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning
+paired_doi_group_pool_resampling,20,top_score,,,,,,,,,10.850000,-1.100000,5,2,13,0.299548,-0.057259,3,0,17,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning
+paired_doi_group_pool_resampling,20,uncertainty,,,,,,,,,14.750000,2.800000,19,0,1,0.490722,0.133915,20,0,0,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning
+paired_doi_group_pool_resampling,20,cost_aware,,,,,,,,,11.600000,-0.350000,8,1,11,0.406082,0.049275,16,0,4,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning
+paired_doi_group_pool_resampling,20,portfolio_batch,,,,,,,,,11.750000,-0.200000,11,0,9,0.370413,0.013606,11,0,9,paired_descriptive_pool_sensitivity_not_hypothesis_test_not_tuning

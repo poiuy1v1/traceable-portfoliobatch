@@ -1,0 +1,224 @@
+name: reproduce-and-regression-audit
+
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  canonical-linux:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        shell: bash
+    container:
+      image: python:3.13.5-slim-bookworm@sha256:4c2cf9917bd1cbacc5e9b07320025bdb7cdf2df7b0ceaccb55e9dd7e30987419
+    env:
+      PYTHONHASHSEED: "0"
+      SOURCE_DATE_EPOCH: "1785369600"
+      OPENBLAS_CORETYPE: Haswell
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      NUMEXPR_NUM_THREADS: "1"
+      MPLCONFIGDIR: /tmp/matplotlib
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      PIP_NO_CACHE_DIR: "1"
+    steps:
+      - name: Install Git for repository-state checks
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends git ca-certificates util-linux coreutils
+          rm -rf /var/lib/apt/lists/*
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Assert Git worktree context after checkout
+        run: |
+          set -euo pipefail
+
+          mkdir -p "$GITHUB_WORKSPACE/ci_diagnostics"
+
+          {
+            echo "pwd=$(pwd)"
+            echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
+            echo "GITHUB_SHA=$GITHUB_SHA"
+            echo "uid=$(id -u)"
+            echo "gid=$(id -g)"
+            echo "user=$(id -un)"
+            echo "--- workspace listing ---"
+            ls -la "$GITHUB_WORKSPACE"
+            echo "--- .git metadata ---"
+            ls -ld "$GITHUB_WORKSPACE/.git" || true
+            echo "--- current safe.directory ---"
+            git config --global --get-all safe.directory || true
+          } | tee "$GITHUB_WORKSPACE/ci_diagnostics/git_context_after_checkout.txt"
+
+          test -n "${GITHUB_WORKSPACE:-}"
+          test -d "$GITHUB_WORKSPACE"
+
+          if [ ! -e "$GITHUB_WORKSPACE/.git" ]; then
+            echo ".git metadata is not visible at GITHUB_WORKSPACE" >&2
+            exit 1
+          fi
+
+          WORKSPACE_REAL="$(realpath "$GITHUB_WORKSPACE")"
+
+          git config --global --add safe.directory "$WORKSPACE_REAL"
+
+          if [ "$WORKSPACE_REAL" != "$GITHUB_WORKSPACE" ]; then
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          fi
+
+          git -C "$WORKSPACE_REAL" rev-parse --is-inside-work-tree
+          git -C "$WORKSPACE_REAL" rev-parse --show-toplevel
+          git -C "$WORKSPACE_REAL" rev-parse HEAD
+
+          OBSERVED_HEAD="$(git -C "$WORKSPACE_REAL" rev-parse HEAD)"
+
+          if [ "$OBSERVED_HEAD" != "$GITHUB_SHA" ]; then
+            echo "HEAD does not equal GITHUB_SHA" >&2
+            echo "HEAD=$OBSERVED_HEAD" >&2
+            echo "GITHUB_SHA=$GITHUB_SHA" >&2
+            exit 1
+          fi
+
+          {
+            echo "resolved_workspace=$WORKSPACE_REAL"
+            echo "git_toplevel=$(git -C "$WORKSPACE_REAL" rev-parse --show-toplevel)"
+            echo "git_head=$OBSERVED_HEAD"
+            echo "--- final safe.directory ---"
+            git config --global --get-all safe.directory || true
+          } | tee -a "$GITHUB_WORKSPACE/ci_diagnostics/git_context_after_checkout.txt"
+      - name: Install exact canonical dependency set
+        run: |
+          python -m pip install --no-cache-dir -r requirements-canonical.txt
+          python -m pip check
+      - name: Discover recognized NumPy AVX512 dispatch targets
+        run: |
+          set -euo pipefail
+          mkdir -p ci_diagnostics
+          python scripts/determine_numpy_avx512_features.py \
+            --require-unset \
+            --github-env "$GITHUB_ENV" \
+            --json-output ci_diagnostics/numpy_cpu_feature_discovery.json
+      - name: Enforce canonical CPU-dispatch normalization
+        run: python scripts/check_canonical_cpu_dispatch.py --json-output ci_diagnostics/cpu_dispatch_gate.json
+      - name: Record runtime and numerical-library diagnostics
+        run: python scripts/collect_runtime_diagnostics.py --output ci_diagnostics/runtime_diagnostics.json
+      - name: Canonical clean-copy reproduction contract
+        run: python scripts/check_clean_reproduction.py --mode canonical --json-output ci_diagnostics/clean_reproduction.json
+      - name: Reproduce committed checkout
+        run: |
+          set -euo pipefail
+          python scripts/run_full_reproduction.py 2>&1 | tee ci_diagnostics/full_reproduction.log
+      - name: Reject convergence warnings
+        run: |
+          if grep -F "ConvergenceWarning" ci_diagnostics/full_reproduction.log; then
+            echo "ConvergenceWarning found in full reproduction log" >&2
+            exit 1
+          fi
+      - name: Independent v49 scientific invariant gate
+        run: python scripts/validate_v49_scientific_gate.py --output ci_diagnostics/v49_scientific_gate.json
+      - name: Unit and integration tests
+        run: |
+          set -euo pipefail
+          pytest -q -W error::sklearn.exceptions.ConvergenceWarning 2>&1 | tee ci_diagnostics/pytest.log
+      - name: Explicit exact trace replay audit
+        run: |
+          set -euo pipefail
+          python scripts/run_audit_replay.py 2>&1 | tee ci_diagnostics/replay.log
+      - name: Canonical semantic regression reference
+        run: python scripts/check_regression_integrity.py --mode canonical --json-output ci_diagnostics/semantic_regression.json
+      - name: Repository validation
+        run: |
+          set -euo pipefail
+          python scripts/validate_repository.py 2>&1 | tee ci_diagnostics/repository_validation.log
+      - name: Collect v49 scientific evidence
+        run: |
+          cp results/reproduction/source_group_audit.json ci_diagnostics/source_group_audit.json
+          cp results/reproduction/leakage_audit.json ci_diagnostics/leakage_audit.json
+          cp results/reproduction/tuning/activation_C_train_internal_SOURCE_GROUP_CV.csv ci_diagnostics/activation_C_train_internal_SOURCE_GROUP_CV.csv
+          cp results/reproduction/tuning/activation_train_group_cv_fold_audit.csv ci_diagnostics/activation_train_group_cv_fold_audit.csv
+          cp results/reproduction/tuning/v49_locked_parameters_before_test.json ci_diagnostics/v49_locked_parameters_before_test.json
+          cp results/reproduction/tuning/portfolio_policy_cost_only_calibration_selection.csv ci_diagnostics/portfolio_policy_cost_only_calibration_selection.csv
+          cp results/reproduction/tuning/portfolio_policy_cost_only_group_bootstrap_stability.csv ci_diagnostics/portfolio_policy_cost_only_group_bootstrap_stability.csv
+          cp results/reproduction/train_held_source_overlap_exclusions.csv ci_diagnostics/train_held_source_overlap_exclusions.csv
+          cp results/reproduction/diagnostics/source_overlap_C_ablation.csv ci_diagnostics/source_overlap_C_ablation.csv
+          cp results/reproduction/diagnostics/source_overlap_C_ablation_summary.json ci_diagnostics/source_overlap_C_ablation_summary.json
+          cp results/reproduction/activation_dummy_baselines.json ci_diagnostics/activation_dummy_baselines.json
+          cp results/reproduction/activation_test_source_group_bootstrap_summary.json ci_diagnostics/activation_test_source_group_bootstrap_summary.json
+          cp results/reproduction/risk_feasibility_audit.csv ci_diagnostics/risk_feasibility_audit.csv
+          cp results/reproduction/test_policy_comparison_primary_cost_only.csv ci_diagnostics/test_policy_comparison_primary_cost_only.csv
+          cp results/reproduction/diagnostics/test_policy_risk_stress_legacy_0p35.csv ci_diagnostics/test_policy_risk_stress_legacy_0p35.csv
+          cp results/reproduction/v49_statistical_summary.json ci_diagnostics/v49_statistical_summary.json
+          cp results/reproduction/replay_summary.json ci_diagnostics/replay_summary.json
+      - name: Require byte-clean canonical tracked outputs
+        run: |
+          set -euo pipefail
+
+          WORKSPACE_REAL="$(realpath "$GITHUB_WORKSPACE")"
+
+          mkdir -p "$WORKSPACE_REAL/ci_diagnostics"
+
+          {
+            echo "pwd=$(pwd)"
+            echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
+            echo "resolved_workspace=$WORKSPACE_REAL"
+            echo "GITHUB_SHA=$GITHUB_SHA"
+            echo "--- .git metadata ---"
+            ls -ld "$WORKSPACE_REAL/.git" || true
+            echo "--- safe.directory ---"
+            git config --global --get-all safe.directory || true
+          } | tee "$WORKSPACE_REAL/ci_diagnostics/git_context_before_cleanliness.txt"
+
+          test -e "$WORKSPACE_REAL/.git"
+
+          git config --global --add safe.directory "$WORKSPACE_REAL"
+
+          git -C "$WORKSPACE_REAL" rev-parse --is-inside-work-tree
+
+          TOPLEVEL="$(git -C "$WORKSPACE_REAL" rev-parse --show-toplevel)"
+          HEAD_SHA="$(git -C "$WORKSPACE_REAL" rev-parse HEAD)"
+
+          echo "git_toplevel=$TOPLEVEL" \
+            | tee -a "$WORKSPACE_REAL/ci_diagnostics/git_context_before_cleanliness.txt"
+
+          echo "git_head=$HEAD_SHA" \
+            | tee -a "$WORKSPACE_REAL/ci_diagnostics/git_context_before_cleanliness.txt"
+
+          if [ "$HEAD_SHA" != "$GITHUB_SHA" ]; then
+            echo "HEAD/GITHUB_SHA mismatch" >&2
+            exit 1
+          fi
+
+          git -C "$WORKSPACE_REAL" diff --exit-code -- . \
+            | tee "$WORKSPACE_REAL/ci_diagnostics/git_diff_worktree.txt"
+
+          git -C "$WORKSPACE_REAL" diff --cached --exit-code -- . \
+            | tee "$WORKSPACE_REAL/ci_diagnostics/git_diff_index.txt"
+
+          git -C "$WORKSPACE_REAL" status \
+            --porcelain=v1 \
+            --untracked-files=no \
+            > "$WORKSPACE_REAL/ci_diagnostics/git_status_tracked_only.txt"
+
+          if [ -s "$WORKSPACE_REAL/ci_diagnostics/git_status_tracked_only.txt" ]; then
+            echo "Tracked repository state is not clean" >&2
+            cat "$WORKSPACE_REAL/ci_diagnostics/git_status_tracked_only.txt" >&2
+            exit 1
+          fi
+
+          echo "TRACKED_GIT_CLEANLINESS_PASS"
+      - name: Upload regression diagnostics
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: paper13-regression-diagnostics-${{ github.sha }}-run-${{ github.run_id }}-attempt-${{ github.run_attempt }}
+          path: ci_diagnostics/
+          if-no-files-found: error
+          retention-days: 30

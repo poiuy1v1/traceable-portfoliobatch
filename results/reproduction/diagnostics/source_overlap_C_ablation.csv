@@ -1,0 +1,5 @@
+C,evaluation_universe,n_rows,n_source_doi_groups,roc_auc,accuracy_at_0_5,brier_score,model_role,diagnostic_only,affects_selected_C
+3,historical_overlap_inclusive_test,436,322,0.63743668891159277,0.6009174311926605,0.23669080334572798,historical_fixed_C_diagnostic_comparator,True,False
+3,final_publication_source_disjoint_test,193,173,0.52887402452619847,0.52331606217616577,0.27340102875378203,historical_fixed_C_diagnostic_comparator,True,False
+0.001,historical_overlap_inclusive_test,436,322,0.57600591265787027,0.56192660550458717,0.24435275110828314,current_source_group_cv_model,True,False
+0.001,final_publication_source_disjoint_test,193,173,0.52162764771460424,0.56476683937823835,0.25235809293375244,current_source_group_cv_model,True,False

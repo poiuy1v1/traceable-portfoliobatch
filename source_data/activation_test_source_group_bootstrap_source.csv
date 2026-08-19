@@ -1,0 +1,4 @@
+metric,seed,requested_resamples,valid_auc_resamples,invalid_auc_resamples,bootstrap_group_unit,source_group_count,confidence_interval_method,confidence_level,lower_percentile,upper_percentile,point_estimate,bootstrap_standard_error,percentile_2_5,percentile_97_5,valid_resamples
+roc_auc,45,10000,10000,0,normalized_source_doi,173,percentile,0.94999999999999996,2.5,97.5,0.52162764771460424,0.048697281231130277,0.42706565624473147,0.61736155151312855,10000
+accuracy_at_0_5,45,10000,10000,0,normalized_source_doi,173,percentile,0.94999999999999996,2.5,97.5,0.56476683937823835,0.038392807380252553,0.48989898989898989,0.63917525773195871,10000
+brier_score,45,10000,10000,0,normalized_source_doi,173,percentile,0.94999999999999996,2.5,97.5,0.25235809293375244,0.0052978221830951274,0.24210881961497632,0.26279992156632803,10000

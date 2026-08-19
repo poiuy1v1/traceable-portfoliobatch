@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.1",
+  "artifact_role": "claim_boundary_only_no_scientific_protocol_change",
+  "study_characterization": "retrospective_benchmark_audit",
+  "confirmatory_preregistered_claim_permitted": false,
+  "historically_untouched_test_claim_permitted": false,
+  "test_history": {
+    "final_test_behavior_inspected_in_prior_development": true,
+    "within_final_v49_pipeline_test_labels_used_for_model_fitting": false,
+    "within_final_v49_pipeline_test_labels_used_for_policy_parameter_selection": false,
+    "safe_statement": "Within the final locked v49 implementation, test labels are not used for model fitting or policy-parameter selection."
+  },
+  "primary_selector_comparison": {
+    "interpretation": "retrospective_descriptive",
+    "confirmatory_superiority_inference_permitted": false,
+    "portfolio_batch_role": "illustrative_deterministic_policy_for_trace_and_replay",
+    "portfolio_batch_superiority_claim_permitted": false
+  },
+  "grouping_scope": {
+    "established": "publication_source_disjointness_by_normalized_doi",
+    "not_established": [
+      "chemical_family_independence",
+      "topology_independence",
+      "linker_family_independence",
+      "metal_node_independence",
+      "structural_similarity_ood"
+    ]
+  },
+  "label_fidelity_scope": {
+    "source": "MOFSimplify_literature_extraction_benchmark",
+    "label_type": "NLP_assigned_solvent_removal_benchmark_annotation",
+    "candidate_level_independently_revalidated_ground_truth_claim_permitted": false,
+    "paper13_wet_lab_validation_claim_permitted": false,
+    "original_mofsimplify_manual_validation_random_subset_n": 100,
+    "original_mofsimplify_manual_validation_clearly_correct": 78,
+    "original_mofsimplify_manual_validation_incorrect": 2,
+    "original_mofsimplify_manual_validation_ambiguous_or_nondefinitive_extracted_text": 20,
+    "subset_counts_generalizable_as_global_error_rate": false,
+    "source_citation": "Nandy et al., Scientific Data 9, 74 (2022), DOI: 10.1038/s41597-022-01181-0",
+    "safe_statement": "The solvent-removal outcomes are MOFSimplify literature-derived, NLP-assigned benchmark annotations rather than candidate-level independently revalidated experimental ground truth."
+  },
+  "terminology": {
+    "hits_reader_facing": "benchmark-positive labels",
+    "proxy_total_cost_reader_facing": "descriptor-complexity proxy cost",
+    "cost_budget_reader_facing": "descriptor-complexity proxy budget",
+    "risk_score_reader_facing": "uncalibrated benchmark risk proxy",
+    "benchmark_positive_label_reader_facing": "benchmark-positive solvent-removal label",
+    "experimentally_validated_success_reader_facing_permitted": false
+  },
+  "diagnostics": {
+    "fixed_C_source_overlap_ablation": "post_lock_descriptive_not_causal_not_tuning",
+    "random_empirical_tail": "descriptive_frequency_not_p_value_not_tuning",
+    "pool_resampling": "descriptive_paired_pool_sensitivity_not_hypothesis_test_not_tuning"
+  }
+}

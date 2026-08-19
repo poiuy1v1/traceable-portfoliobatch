@@ -1,0 +1,23 @@
+{
+  "active_calibration_doi_coverage": 1.0,
+  "active_calibration_row_count": 158,
+  "active_test_doi_coverage": 1.0,
+  "active_test_row_count": 193,
+  "active_train_row_count": 1394,
+  "active_training_doi_coverage": 1.0,
+  "calibration_doi_group_count": 136,
+  "excluded_train_source_overlap_doi_group_count": 270,
+  "excluded_train_source_overlap_row_count": 434,
+  "policy_calibration_test_source_doi_overlap_count": 0,
+  "schema_version": "v49-source-group-audit-1.0",
+  "source_group_basis": "normalized_source_doi",
+  "source_manifest": "data/processed/full_public_stability_source_manifest.csv",
+  "status": "PASS_COMPLETE_ACTIVE_SOURCE_GROUP_DISJOINT",
+  "test_doi_group_count": 173,
+  "train_calibration_source_doi_overlap_count": 0,
+  "train_test_source_doi_overlap_count": 0,
+  "training_doi_group_count": 865,
+  "training_rows_with_packaged_source_doi": 1394,
+  "training_rows_without_packaged_source_doi": 0,
+  "training_source_doi_complete": true
+}

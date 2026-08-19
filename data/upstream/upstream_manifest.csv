@@ -1,0 +1,2 @@
+resource,title,version,doi,archive_file,upstream_md5,license,relative_paths_used
+MOFSimplify,"MOFSimplify: Machine Learning Models with Extracted Stability Data of Three Thousand Metal-Organic Frameworks",1.1.0,10.5281/zenodo.5736562,SciData.zip,52c434083c83c3ff81f892951f173875,CC-BY-4.0,"MOFSimplify-main/model/solvent/ANN/dropped_connectivity_dupes/train.csv; MOFSimplify-main/model/solvent/ANN/dropped_connectivity_dupes/val.csv; MOFSimplify-main/model/solvent/ANN/dropped_connectivity_dupes/test.csv; thermal train/validation tables documented in split_manifest.csv"
