@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 title: "Traceable batch decision layer for MOF activation stability screening"
-message: "Version 1.0.0 release metadata candidate. Cite the archived release once its persistent identifier has been minted."
+message: "Please cite the specific software release and its associated Zenodo record."
 type: software
-version: "1.0.0"
+version: "1.0.1"
 authors:
   - family-names: "Wei"
     given-names: "Jinnan"
