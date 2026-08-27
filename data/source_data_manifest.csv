@@ -9,7 +9,12 @@ results/reproduction/tuning/v49_locked_parameters_before_test.json,authoritative
 results/reproduction/tuning/activation_C_train_internal_SOURCE_GROUP_CV.csv,training-only source-DOI-group model selection,yes
 results/reproduction/tuning/activation_train_group_cv_fold_audit.csv,per-fold DOI overlap class-balance and row-count audit,yes
 results/reproduction/tuning/portfolio_policy_cost_only_calibration_selection.csv,calibration-only 27-configuration cost-only policy selection,yes
-results/reproduction/tuning/portfolio_policy_cost_only_group_bootstrap_stability.csv,publication-source-group bootstrap stability of the locked cost-only policy,yes
+results/reproduction/tuning/portfolio_policy_cost_only_group_bootstrap_stability.csv,historical v1.0.1 with-replacement policy-stability output retained for provenance and superseded for interpretation,yes
+results/reproduction/diagnostics/v1_0_1_policy_stability_duplicate_candidate_audit.csv,reproduction and duplicate-candidate audit of the historical v1.0.1 stability design,yes
+results/reproduction/tuning/portfolio_policy_cost_only_group_subsampling_stability.csv,authoritative v1.0.2 80-percent DOI-group subsampling stability without replacement,yes
+results/reproduction/tuning/portfolio_policy_cost_only_group_subsampling_summary.json,authoritative v1.0.2 corrected stability summary and scope boundary,yes
+results/reproduction/v1_0_2_correction_manifest.json,hash-bound manifest for the bounded v1.0.2 correction,yes
+source_data/policy_stability_unique_candidate_subsampling_source.csv,source data for the corrected v1.0.2 policy-stability analysis,yes
 results/reproduction/train_held_source_overlap_exclusions.csv,held rows retained as provenance-only because their source DOI occurs in training,yes
 models/activation_logistic_train_split.json,activation model preprocessing coefficients and convergence metadata,yes
 results/reproduction/diagnostics/source_overlap_C_ablation.csv,post-lock fixed-C by source-universe diagnostic table,yes

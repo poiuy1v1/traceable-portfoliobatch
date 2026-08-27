@@ -2,7 +2,7 @@ cff-version: 1.2.0
 title: "Traceable batch decision layer for MOF activation stability screening"
 message: "Please cite the specific software release and its associated Zenodo record."
 type: software
-version: "1.0.1"
+version: "1.0.2"
 authors:
   - family-names: "Wei"
     given-names: "Jinnan"

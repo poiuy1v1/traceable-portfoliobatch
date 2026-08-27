@@ -6,7 +6,7 @@
     "self_coverage": "results/reproduction/generated_artifact_manifest.json, results/reproduction/regression_reference.json, results/reproduction/regression_contract.json and results/reproduction/runtime_diagnostics.json are excluded to avoid self-referential hashing and are covered by package-level manifests",
     "visual_equivalence": "figure dimensions and bounded rendered-pixel differences; PDF/SVG byte identity is not a platform-neutral scientific requirement"
   },
-  "file_count": 98,
+  "file_count": 103,
   "files": {
     "data/derived/full_public_stability_features_relocked.csv": {
       "bytes": 4477982,
@@ -183,6 +183,11 @@
       "regression_class": "canonical_byte_identity",
       "sha256": "59058a7b4bacf72e30b99bfb2060c9ab8f16e1c385041fe4e415b4da5c9379f8"
     },
+    "results/reproduction/diagnostics/v1_0_1_policy_stability_duplicate_candidate_audit.csv": {
+      "bytes": 6027,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "df3a062c26b6a1e18f38cb71e65460253e045564cb6a7ae89d8acc900aa97245"
+    },
     "results/reproduction/full_reproduction_summary.json": {
       "bytes": 58341,
       "regression_class": "canonical_byte_identity",
@@ -313,6 +318,16 @@
       "regression_class": "canonical_byte_identity",
       "sha256": "87de5a033e42d622e5b804f5cb491c383a461ba9f3ce11861912e926758e9597"
     },
+    "results/reproduction/tuning/portfolio_policy_cost_only_group_subsampling_stability.csv": {
+      "bytes": 6318,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "4b95b50ec0630f5708ab4e14c09eeacfaffd01d6418cdfbe530d5b3995aa8ce7"
+    },
+    "results/reproduction/tuning/portfolio_policy_cost_only_group_subsampling_summary.json": {
+      "bytes": 899,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "c9cee93d38fbabad55cb03b49fd22ae93015d99ae2372e1bdaf86118515933d8"
+    },
     "results/reproduction/tuning/portfolio_policy_group_bootstrap_stability.csv": {
       "bytes": 2374,
       "regression_class": "canonical_byte_identity",
@@ -332,6 +347,11 @@
       "bytes": 8093,
       "regression_class": "canonical_byte_identity",
       "sha256": "7fe2e2a13ea232a0952ff6d2128ebd5ad5d1c5c69ff323e757b3730a7bf7b2ee"
+    },
+    "results/reproduction/v1_0_2_correction_manifest.json": {
+      "bytes": 1671,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "b04b93f36350588104ab0e04936ee92148fc9d2e2c2354f49128b694a4b395eb"
     },
     "results/reproduction/v49_statistical_summary.json": {
       "bytes": 32131,
@@ -422,6 +442,11 @@
       "bytes": 5395,
       "regression_class": "canonical_byte_identity",
       "sha256": "1bdc9ca366e1a55e3c68da2fb2d5d17340275e246014c13192da32cbd44c81e2"
+    },
+    "source_data/policy_stability_unique_candidate_subsampling_source.csv": {
+      "bytes": 6318,
+      "regression_class": "canonical_byte_identity",
+      "sha256": "4b95b50ec0630f5708ab4e14c09eeacfaffd01d6418cdfbe530d5b3995aa8ce7"
     },
     "source_data/risk_feasibility_audit_source.csv": {
       "bytes": 2594,

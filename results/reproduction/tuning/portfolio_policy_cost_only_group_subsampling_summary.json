@@ -1,0 +1,19 @@
+{
+  "base_release": "v1.0.1",
+  "corrected_delta_zero_count": 18,
+  "corrected_design": "80% publication-source-group subsampling without replacement",
+  "corrected_exact_locked_tuple_count": 3,
+  "corrected_full_batch_count": 20,
+  "corrected_sampled_groups_per_subsample": 109,
+  "corrected_unique_five_candidate_count": 20,
+  "old_archived_reproduction": "PASS",
+  "old_delta_zero_count": 14,
+  "old_delta_zero_duplicate_selected_candidate_count": 10,
+  "old_design": "80% publication-source-group sampling with replacement",
+  "old_exact_locked_tuple_count": 1,
+  "old_full_batch_count": 20,
+  "schema_version": "v1.0.2-policy-stability-correction-1.0",
+  "scope": "secondary calibration policy-stability analysis only; the original 158-row calibration lock, model, final-test results, primary selectors and five archived traces are unchanged",
+  "seeds": "0..19",
+  "source_group_count": 136
+}

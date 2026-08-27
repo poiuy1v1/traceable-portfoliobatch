@@ -631,11 +631,19 @@ def test_cost_only_policy_grid_has_exact_deterministic_winner():
         )
 
 
-def test_development_status_and_version_are_not_public_release():
-    assert (ROOT / "VERSION").read_text().strip() == "0.49-dev"
-    status = (ROOT / "DEVELOPMENT_STATUS.md").read_text(encoding="utf-8")
-    assert "DEVELOPMENT-ONLY PRIVATE REPOSITORY" in status
-    assert "Do not create a `v1.0.0` tag" in status
+def test_public_release_version_and_metadata_are_consistent():
+    version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+    parts = version.split(".")
+    assert len(parts) == 3 and all(part.isdigit() for part in parts)
+
+    cff = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
+    version_lines = [line for line in cff.splitlines() if line.startswith("version:")]
+    assert len(version_lines) == 1
+    cff_version = version_lines[0].split(":", 1)[1].strip().strip('"').strip("'")
+    assert cff_version == version
+
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert "PUBLIC RELEASE REPOSITORY" in readme
 
 
 def test_source_data_inventory_covers_regression_contracts():
@@ -769,24 +777,41 @@ def test_cross_platform_contract_excludes_iteration_counts_from_scientific_equiv
 
 
 def test_repository_protocol_docs_use_v49_cost_only_primary_names():
-    docs = {
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    protocol_docs = {
         path: (ROOT / path).read_text(encoding="utf-8")
         for path in (
-            "README.md",
             "docs/reproduction_guide.md",
             "docs/data_dictionary.md",
             "docs/trace_schema.md",
         )
     }
-    combined = "\n".join(docs.values())
+    combined = "\n".join([readme, *protocol_docs.values()])
 
-    for text in docs.values():
+    for text in protocol_docs.values():
         assert "v49_locked_parameters_before_test.json" in text
-    assert "test_policy_comparison_primary_cost_only.csv" in docs["README.md"]
-    assert "test_policy_comparison_primary_cost_only.csv" in docs["docs/data_dictionary.md"]
-    assert "test_policy_risk_stress_legacy_0p35.csv" in docs["README.md"]
-    assert "test_policy_risk_stress_legacy_0p35.csv" in docs["docs/reproduction_guide.md"]
-    assert "*_test_primary_cost_contract_trace.json" in docs["docs/trace_schema.md"]
+    assert (
+        "test_policy_comparison_primary_cost_only.csv"
+        in protocol_docs["docs/reproduction_guide.md"]
+    )
+    assert (
+        "test_policy_comparison_primary_cost_only.csv"
+        in protocol_docs["docs/data_dictionary.md"]
+    )
+    assert (
+        "test_policy_risk_stress_legacy_0p35.csv"
+        in protocol_docs["docs/reproduction_guide.md"]
+    )
+    assert (
+        "test_policy_risk_stress_legacy_0p35.csv"
+        in protocol_docs["docs/data_dictionary.md"]
+    )
+    assert (
+        "*_test_primary_cost_contract_trace.json"
+        in protocol_docs["docs/trace_schema.md"]
+    )
+    assert "cost-only" in readme
+    assert "immediate cumulative feasibility" in readme
 
     for stale_claim in (
         "v45A3_locked_parameters_before_test.json",

@@ -1,0 +1,37 @@
+{
+  "base_release": "v1.0.1",
+  "frozen_input_sha256": {
+    "data/derived/full_public_stability_features_relocked.csv": "d334270b4b26b30addb3a7d09fe37ba05b8711b8e6671e64ec5be51bfcaaf44b",
+    "models/activation_logistic_train_split.json": "219c3fa01be1530ea20057ab9a91839567974eb68ee6680aca7447860994ea30",
+    "results/reproduction/tuning/portfolio_policy_cost_only_group_bootstrap_stability.csv": "87de5a033e42d622e5b804f5cb491c383a461ba9f3ce11861912e926758e9597"
+  },
+  "locked_evidence_unchanged": {
+    "activation_model": true,
+    "final_test_metrics": true,
+    "policy_locked_on_original_calibration": true,
+    "primary_five_selectors": true,
+    "primary_five_traces": true,
+    "selected_C": 0.001,
+    "thermal_analysis": true,
+    "train_calibration_test_membership": true
+  },
+  "outputs": {
+    "results/reproduction/diagnostics/v1_0_1_policy_stability_duplicate_candidate_audit.csv": {
+      "sha256": "df3a062c26b6a1e18f38cb71e65460253e045564cb6a7ae89d8acc900aa97245",
+      "size": 6027
+    },
+    "results/reproduction/tuning/portfolio_policy_cost_only_group_subsampling_stability.csv": {
+      "sha256": "4b95b50ec0630f5708ab4e14c09eeacfaffd01d6418cdfbe530d5b3995aa8ce7",
+      "size": 6318
+    },
+    "results/reproduction/tuning/portfolio_policy_cost_only_group_subsampling_summary.json": {
+      "sha256": "c9cee93d38fbabad55cb03b49fd22ae93015d99ae2372e1bdaf86118515933d8",
+      "size": 899
+    },
+    "source_data/policy_stability_unique_candidate_subsampling_source.csv": {
+      "sha256": "4b95b50ec0630f5708ab4e14c09eeacfaffd01d6418cdfbe530d5b3995aa8ce7",
+      "size": 6318
+    }
+  },
+  "schema_version": "v1.0.2-correction-manifest-1.0"
+}
